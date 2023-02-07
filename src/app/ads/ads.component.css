@@ -1,0 +1,14 @@
+h1{
+    position: relative;
+ 
+
+font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 600;
+font-size: 45px;
+line-height: 60px;
+/* identical to box height */
+
+
+color: #000000;
+}
