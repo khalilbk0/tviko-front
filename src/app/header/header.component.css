@@ -1,0 +1,37 @@
+.bg-brown{
+    background-color: #EBE6E4  !important;
+}
+.logo{
+    margin-left: 15%;
+}
+.social-logo{ 
+   display: inline-block;
+   flex-direction: row;
+}
+.nav-item a{
+    
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+    /* identical to box height */
+    
+    text-align: center;
+    letter-spacing: 0.05em;
+    
+    color: #000000;
+}
+.nav-item a:hover{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+    /* identical to box height */
+    
+    text-align: center;
+    letter-spacing: 0.05em;
+    background-color: #000000;
+    color: #ffffff;
+}

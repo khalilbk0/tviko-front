@@ -1,0 +1,13 @@
+.text{
+
+
+position: relative;
+margin: auto;
+ 
+}
+
+@media only screen and (max-width: 600px) {
+    .text {
+       margin-top: 15%;
+    }
+  }
