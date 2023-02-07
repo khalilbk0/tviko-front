@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./ads.component.css']
 })
 export class AdsComponent {
-title: string;
+title: string; 
+ads = [{id:1,title:'60',img:'https://via.placeholder.com/150 '},{id:1,title:'80',img:'https://via.placeholder.com/150 '},{id:1,title:'80',img:'https://via.placeholder.com/150 '},{id:1,title:'80',img:'https://via.placeholder.com/150 '}]
 constructor(){
   this.title ="NEKRETNINE U TREBINJU"
 }
