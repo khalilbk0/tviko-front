@@ -1,0 +1,7 @@
+.bg-service{
+    background-image: url('../../assets/bg-service.png');
+    min-height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

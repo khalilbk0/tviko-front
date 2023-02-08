@@ -7,14 +7,21 @@ font-style: normal;
 font-weight: 600;
 font-size: 45px;
 line-height: 60px;
+padding-left: 3%;
 /* identical to box height */
 
 
 color: #000000;
 }
-
+@media only screen and (max-width: 600px) {
+    h1{
+      font-size: 2rem;
+    }
+  }
 .bg-tviko{
-    background-image: '';
+    background-image: url('../../assets/tviko-left.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom 20px left 0px;
 }
 
 #goto {
@@ -24,14 +31,21 @@ color: #000000;
     width: auto;
     padding: 15px;
     margin-top: 15px;
- 
+    text-align: center;
 
 font-family: 'Playfair Display';
 font-style: normal;
 font-weight: 700;
-font-size: 20px;
-line-height: 27px;
+font-size: 1.2rem; 
 /* identical to box height */
 
 letter-spacing: 0.05em;
 }
+@media only screen and (max-width: 600px) {
+    h1{
+      font-size: 2rem;
+    }
+    #goto{
+        font-size: 1rem ;
+    }
+  }

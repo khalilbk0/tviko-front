@@ -8,6 +8,9 @@ import { SliderComponent } from './slider/slider.component';
 import { AdsComponent } from './ads/ads.component';
 import { DividerComponent } from './divider/divider.component';
 import { Ads2Component } from './ads2/ads2.component';
+import { Ads3Component } from './ads3/ads3.component';
+import { HomeComponent } from './home/home.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { Ads2Component } from './ads2/ads2.component';
     SliderComponent,
     AdsComponent,
     DividerComponent,
-    Ads2Component
+    Ads2Component,
+    Ads3Component,
+    HomeComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
