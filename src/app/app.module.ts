@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SliderComponent } from './slider/slider.component';
 import { AdsComponent } from './ads/ads.component';
+import { DividerComponent } from './divider/divider.component';
+import { Ads2Component } from './ads2/ads2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SliderComponent,
-    AdsComponent
+    AdsComponent,
+    DividerComponent,
+    Ads2Component
   ],
   imports: [
     BrowserModule,

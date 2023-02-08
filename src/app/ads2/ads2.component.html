@@ -1,0 +1,29 @@
+ 
+  <div class="container-fluid pb-5 bg-tviko">
+    <div class="row">
+      <div class="col p-5">
+          <h1> {{title}} </h1>
+         </div>
+    </div> 
+      
+   
+    <div class="row">
+      <div class="col-sm-6 col-lg-3 d-flex justify-content-center" *ngFor="let ad of ads">
+          <div class="card my-2" style="width: 18rem;">
+              <img class="card-img-top" [src]="ad.img" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{ad.title}} m2</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> 
+              </div>
+            </div>
+      </div> 
+      
+      </div>      
+  
+      <div class="d-flex justify-content-center">
+          <a href="/a" id="goto">
+              POGLEDAJTE SVE NEKRETNINE
+          </a>
+      </div>
+      
+  </div> 
