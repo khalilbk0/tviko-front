@@ -5,3 +5,37 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.card { 
+    width: 260px;
+    height: 370px;
+border: 5px solid #CD8B53;
+}
+h1{
+    font-family: 'Playfair Display';
+font-style: normal; 
+font-weight: bold;
+font-size: 23px;
+line-height: 31px;
+margin-top: 15px;
+text-align: center;
+}
+.card-text{
+    font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 23px;
+text-align: center
+}
+.col:nth-child(2n) {
+    margin-top: 120px !important;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .col{
+        margin-top: 15px !important;
+      }
+      .col:nth-child(2n) {
+        margin-top: 15px !important;
+      }
+  }

@@ -1,3 +1,18 @@
 <div class="container-fluid bg-service">
-    
+    <div class="row pt-5 mx-auto d-flex justify-content-center">
+        <div class="col px-5 mx-5 my-2" *ngFor="let service of services" >
+                <div class="card">
+                    <img class="card-img-top pt-3" [src]="service.icon" height="88" alt="Card image cap">
+                    <div class="card-title">
+                        <h1 class="card-text"><b>{{service.title}}</b></h1>
+                      </div>
+                    <div class="card-body">
+                      <p class="card-text">{{service.desc}}</p>
+                    </div>
+                </div>
+            
+              
+        </div>
+    </div>
 </div>
+ 
