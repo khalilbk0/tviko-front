@@ -1,0 +1,26 @@
+h1{ 
+
+font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 600;
+font-size: 45px;
+line-height: 60px;
+/* identical to box height */
+
+letter-spacing: 0.04em;
+
+color: #000000;
+
+}
+p{
+    font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 27px;
+/* identical to box height */
+
+letter-spacing: 0.06em;
+
+color: rgba(0, 0, 0, 0.7)
+}

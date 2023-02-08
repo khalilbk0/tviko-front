@@ -39,7 +39,12 @@ font-weight: 700;
 font-size: 1.2rem; 
 /* identical to box height */
 
-letter-spacing: 0.05em;
+letter-spacing: 0.05em; 
+transition: 0.3s;
+}
+#goto:hover{
+    background-color: transparent;
+    border: solid 1px #D9A575; 
 }
 @media only screen and (max-width: 600px) {
     h1{
