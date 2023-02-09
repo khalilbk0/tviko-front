@@ -2,10 +2,11 @@
     background-color: #EBE6E4  !important;
 }
 .logo{
-    margin-left: 15%;
+    margin-left: 20%;
 }
 .social-logo{ 
-   display: inline-block;
+   display: inline-block; 
+   margin-right: 20px;
    flex-direction: row;
 }
 .nav-item a{
@@ -20,18 +21,18 @@
     text-align: center;
     letter-spacing: 0.05em;
     
+    margin-left: 29px;
     color: #000000;
 }
-.nav-item a:hover{
+.nav-item a:hover,.selected {
     font-family: 'Playfair Display';
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
     line-height: 23px;
     /* identical to box height */
-    
     text-align: center;
     letter-spacing: 0.05em;
     background-color: #000000;
-    color: #ffffff;
+    color: #ffffff !important ;
 }

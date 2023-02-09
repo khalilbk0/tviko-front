@@ -30,7 +30,7 @@ color: #000000;
     text-decoration: none;
     width: auto;
     padding: 15px;
-    margin-top: 15px;
+    margin-top: 50px;
     text-align: center;
 
 font-family: 'Playfair Display';
@@ -53,4 +53,14 @@ transition: 0.3s;
     #goto{
         font-size: 1rem ;
     }
+  }
+  .card{
+
+    transition: 600ms;
+  }
+  .card:hover{
+    scale: 1.1;transform: rotate(1deg);
+  }
+  svg{
+    margin-left: 20px;
   }

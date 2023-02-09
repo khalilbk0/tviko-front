@@ -7,13 +7,17 @@ margin: auto;
 }
 
 img, svg{
-    margin: auto;
+    
+    margin-right: auto;
     height: 100%;
     width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
     .text {
-       margin-top: 15%;
+       margin-top: -12%;
+    }
+    .tvika-logo{
+        margin-left: -50%;
     }
   }

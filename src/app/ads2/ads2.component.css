@@ -17,7 +17,7 @@ color: #000000;
 .bg-tviko{
     background-image: url('../../assets/tviko-left.jpg');
     background-repeat: no-repeat;
-    background-position: bottom 20px left 15px;
+    background-position: bottom 10% left 10%;
 }
 
 #goto {
@@ -26,7 +26,7 @@ color: #000000;
     text-decoration: none;
     width: auto;
     padding: 15px;
-    margin-top: 15px;
+    margin-top: 50px;
     text-align: center;
 
 font-family: 'Playfair Display';
@@ -38,6 +38,7 @@ font-size: 1.2rem;
 letter-spacing: 0.05em; 
 transition: 0.3s;
 }
+
 #goto:hover{
     background-color: transparent;
     border: solid 1px #D9A575; 
@@ -50,4 +51,8 @@ transition: 0.3s;
     #goto{
         font-size: 1rem ;
     }
+  }
+
+  svg{
+    margin-left: 20px;
   }
