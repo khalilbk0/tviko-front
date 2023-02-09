@@ -12,6 +12,7 @@ import { Ads3Component } from './ads3/ads3.component';
 import { HomeComponent } from './home/home.component';
 import { ServicesComponent } from './services/services.component';
 import { ContactCompComponent } from './contact-comp/contact-comp.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ContactCompComponent } from './contact-comp/contact-comp.component';
     Ads3Component,
     HomeComponent,
     ServicesComponent,
-    ContactCompComponent
+    ContactCompComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

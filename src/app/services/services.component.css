@@ -5,6 +5,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 5%; 
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
  
 .card { 

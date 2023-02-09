@@ -1,0 +1,35 @@
+.bg-footer{  
+background: #EBE6E4;
+margin: 0px;
+padding: 0px;
+}
+h6{
+    font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height */
+
+letter-spacing: 0.04em;
+
+color: #A65F23;
+
+}
+.text-reset{
+    font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 20px;
+/* identical to box height */
+
+text-align: center; 
+letter-spacing: 0.04em;
+
+color: #000000;
+text-decoration: none;
+}
+.social{
+    margin-left: 25px;
+}
