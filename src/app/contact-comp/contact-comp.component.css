@@ -24,3 +24,64 @@ letter-spacing: 0.06em;
 
 color: rgba(0, 0, 0, 0.7)
 }
+h2{
+    text-transform: uppercase;
+    font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 33px;
+letter-spacing: 0.04em;
+
+color: #A65F23;
+}
+h3{
+    font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 500;
+font-size: 25px;
+line-height: 33px;
+letter-spacing: 0.04em;
+
+color: #000000;
+}
+input, textarea{
+    
+margin-bottom: 5%;
+background: #FFFFFF;
+border: 2px solid #CD8B53;
+border-radius: 0px;
+}
+input:focus, textarea:focus{
+
+    box-shadow: none;
+    outline: none;
+    
+border: 2px solid #754012;
+
+}
+label{
+    font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 27px;
+/* identical to box height */
+
+letter-spacing: 0.04em;
+
+color: #000000;
+}
+.social{
+    margin: 5%;
+}
+.bg-contact{  
+ position: absolute;
+ right: 0;
+}
+
+@media only screen and (max-width: 800px) {
+    .bg-contact{  
+         display: none;
+       }
+  }

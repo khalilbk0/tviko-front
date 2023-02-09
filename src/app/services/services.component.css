@@ -1,18 +1,19 @@
 .bg-service{
-    background-image: url('../../assets/bg-service.png');
-    max-height: 400px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 5%;
+  background-image: url('../../assets/bg-service.png');
+  max-height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 5%; 
 }
+ 
 .card { 
-    width: 260px; 
-    padding-bottom: 13%;
+  width: 260px; 
+  padding-bottom: 13%;
 border: 5px solid #CD8B53;
 }
 h1{
-    font-family: 'Playfair Display';
+  font-family: 'Playfair Display';
 font-style: normal; 
 font-weight: bold;
 font-size: 23px;
@@ -21,7 +22,7 @@ margin-top: 15px;
 text-align: center;
 }
 .card-text{
-    font-family: 'Playfair Display';
+  font-family: 'Playfair Display';
 font-style: normal;
 font-weight: 400;
 font-size: 17px;
@@ -29,58 +30,57 @@ line-height: 23px;
 text-align: center
 }
 .service:nth-child(2n) {
-    margin-top: 120px !important;
-  }
+  margin-top: 120px !important;
+}
 
-  @media only screen and (max-width: 600px) {
-    .service{
-        margin-top: 15px !important;
-      }
-      .service:nth-child(2n) {
-        margin-top: 15px !important;
-      }
-  }
-  .bg-numbers{
-    background: #D9A575;
-    
-    background-size: cover;
-    width: 100% !important;
-  }
-  p{
-    text-align: center;
-     
-  }
-  .num{
-    font-size: 5rem!important;
-    color: black;
-    margin-bottom: 50px;
-  }
-  .textNumber{
-    font-family: 'Playfair Display';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 32px;
-    color: black;
-    /* identical to box height */
-    margin-bottom: 15px;
-    text-align: center;
-  }
+@media only screen and (max-width: 600px) {
+  .service{
+      margin-top: 15px !important;
+    }
+    .service:nth-child(2n) {
+      margin-top: 15px !important;
+    }
+}
+.bg-numbers{
+  background-color: #D9A575;
+  margin-left: 0px!important; 
+  width: 100%;
+}
+p{
+  text-align: center;
+   
+}
+.num{
+  font-size: 5rem!important;
+  color: black;
+  margin-bottom: 50px;
+}
+.textNumber{
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 32px;
+  color: black;
+  /* identical to box height */
+  margin-bottom: 15px;
+  text-align: center;
+}
 
 
+.borderRight{
+  border-right: 2px solid black; 
+}
+
+
+@media only screen and (max-width: 600px) {
   .borderRight{
-    border-right: 2px solid black; 
-  }
+      border-right: none
+    }
+}
+h2{
+  position: relative;
 
-
-  @media only screen and (max-width: 600px) {
-    .borderRight{
-        border-right: none
-      }
-  }
-  h2{
-    position: relative;
- 
 
 font-family: 'Playfair Display';
 font-style: normal;
@@ -88,10 +88,10 @@ font-weight: 600;
 font-size: 45px;
 line-height: 60px;
 padding-left: 3%;
-  }
+}
 
-  @media only screen and (max-width: 600px) {
-    h2{
-      font-size: 2rem;
-    }
+@media only screen and (max-width: 600px) {
+  h2{
+    font-size: 2rem;
   }
+}

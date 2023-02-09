@@ -32,19 +32,18 @@ color: #000000;
     padding: 15px;
     margin-top: 50px;
     text-align: center;
-
 font-family: 'Playfair Display';
 font-style: normal;
 font-weight: 700;
 font-size: 1.2rem; 
 /* identical to box height */
-
 letter-spacing: 0.05em; 
-transition: 0.3s;
+transition: 500ms;
 }
-#goto:hover{
-    background-color: transparent;
-    border: solid 1px #D9A575; 
+#goto:hover{ 
+  background: #A65F23;   
+  
+letter-spacing: 0.08em;  
 }
 @media only screen and (max-width: 600px) {
     h1{
@@ -64,3 +63,4 @@ transition: 0.3s;
   svg{
     margin-left: 20px;
   }
+  
