@@ -1,0 +1,38 @@
+main{
+    background-image: url('../../assets/bg-category.png'); 
+    margin-top: -50px;
+ 
+}
+h1{
+
+font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 900;
+font-size: 76px;
+line-height: 101px;
+text-align: center;
+letter-spacing: 0.05em;
+
+color: #000000;
+}
+a{ 
+width: 75%;
+height: 53px; 
+padding: 10px;
+text-decoration: none;
+background: #D9A575;
+font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 27px;
+/* identical to box height */
+
+letter-spacing: 0.05em;
+
+color: #000000;
+}
+a:hover{
+
+    background: #A65F23;
+}
