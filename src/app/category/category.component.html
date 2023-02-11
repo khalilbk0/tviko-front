@@ -7,23 +7,55 @@
     </div>
    
   </main>
-
-  <section>
-    <div class="container-fluid">
-        <div class="row mx-auto w-75">
-            <div class="col">
-                <a href="/category?id=1">{{id}}</a>
-            </div>
-            
-            <div class="col">
-                <a href="/category?id=2">NEKRETNINE U TREBINJU</a>
-            </div>
-            
-            <div class="col">
-                <a href="/category?id=2">NEKRETNINE U TREBINJU</a>
-            </div>
-            
+  <div class="container-fluid">
+    <div class="row mx-auto w-75">
+        <div class="col"  >
+            <a href="/category?id=1" [ngClass]="{'selected': catOneSelected}" > >NEKRETNINE U TREBINJU</a>
         </div>
+        
+        <div class="col">
+            <a href="/category?id=2" [ngClass]="{'selected': catTwoSelected}">NEKRETNINE U TREBINJU</a>
+        </div>
+        
+        <div class="col">
+            <a href="/category?id=3" [ngClass]="{'selected': catThreeSelecteD}">NEKRETNINE U TREBINJU</a>
+        </div>
+        
     </div>
+</div>
 
-  </section>
+
+<div class="container-fluid pt-5 mt-5 w-75">
+<div class="mx-auto px-5 mx-5">
+    <div class="row">
+        
+        <div class="col-sm-6 col-lg-3 d-flex justify-content-center" *ngFor="let result of results | slice:startIndex:endIndex">
+            <div class="card my-2" style="width: 18rem;">
+                <img class="card-img-top" src="https://via.placeholder.com/150?Text=tovika" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{result.name}} m2</h5>
+                  <p class="card-text">{{result.email}}</p> 
+                </div>
+              </div>
+        </div> 
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row mx-auto w-75 my-5">
+        <div class="col"  >
+            <a   (click)="previousPage()" [ngClass]="{'disabled': catOneSelected}" > Previous </a>
+        </div>
+        
+        <div class="col">
+            <a   (click)="nextPage()" [ngClass]="{'selected': catTwoSelected}">Next</a>
+        </div>
+        
+        
+</div>
+</div> 
+<div class="container-fluid w-100">
+
+  <app-footer></app-footer>
+</div>
+  
+  
