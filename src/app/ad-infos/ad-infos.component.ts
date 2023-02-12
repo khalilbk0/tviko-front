@@ -1,3 +1,4 @@
+import { Ad } from './../ad';
 import { Component } from '@angular/core';
 import axios from 'axios' ; 
 import { Router, ActivatedRoute, ParamMap, Route } from '@angular/router';
@@ -10,7 +11,7 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./ad-infos.component.css']
 })
 export class AdInfosComponent {
-  slidesStore :string[] = [] ;
+  slidesStore : any[] = [] ;
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: false,
@@ -69,27 +70,36 @@ export class AdInfosComponent {
     },
   ];
   id : string | undefined;
-  ad!: AdDetails;
-  constructor(private route: ActivatedRoute) { }
+  ad :any ;
+  constructor(private route: ActivatedRoute) { 
+
+
+    this.route.queryParams
+    .subscribe(params => {
+      console.log(params); // { orderby: "price" }
+      this.id = params['id'];
+      console.log(this.id); // price
+
+      axios.get('http://localhost:1234/ad.php?id='+this.id).then((res) => {
+        this.ad = res.data[0]
+        var slides = {
+          id: 1 , 
+          src:res.data[0].mainImage ,
+          title:'Image 1'
+        }
+        res.data[0].otherImages ; 
+        this.slidesStore?.push(slides) 
+        console.log(this.ad);  
+        
+      })
+      
+    }
+  ); 
+  }
 
   ngOnInit() {
     
-    this.route.queryParams
-      .subscribe(params => {
-        console.log(params); // { orderby: "price" }
-        this.id = params['id'];
-        console.log(this.id); // price
-
-        axios.get('http://localhost/tvikoBackEnd/ad.php?id='+this.id).then((res) => {
-          this.ad = res.data[0]
-          this.slidesStore?.push(this.ad.mainImage)
-          this.slidesStore.push(res.data[0].otherImages)
-          console.log(this.slidesStore);  
-          
-        })
-        
-      }
-    ); 
+ 
 
   }
 }

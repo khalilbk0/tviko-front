@@ -28,19 +28,20 @@ export class AdsComponent {
 
 
 setCategoryOne() {
-  axios.get('http://localhost/tvikoBackEnd/listByCategory.php?id=1').then((res) => {
+  axios.get('http://localhost:1234/listByCategory.php?id=1').then((res) => {
     this.Category1 = res.data
+    console.log(res.data)
   })
 }
 
 
 setCategoryTwo() {
-  axios.get('http://localhost/tvikoBackEnd/listByCategory.php?id=2').then((res) => {
+  axios.get('http://localhost:1234/listByCategory.php?id=2').then((res) => {
     this.Category2 = res.data
   })
 }
 setCategoryThree() {
-  axios.get('http://localhost/tvikoBackEnd/listByCategory.php?id=3').then((res) => {
+  axios.get('http://localhost:1234/listByCategory.php?id=3').then((res) => {
     this.Category3 = res.data
   })
 }
