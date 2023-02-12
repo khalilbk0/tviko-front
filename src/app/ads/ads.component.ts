@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import axios from 'axios';
 import { Ad } from '../ad';
+import { AdsServiceService } from '../ads-service.service';
 @Component({
   selector: 'app-ads',
   templateUrl: './ads.component.html',
@@ -8,13 +9,51 @@ import { Ad } from '../ad';
 })
 export class AdsComponent {
  
-Category1  = [{"squarefeet":'50',"id":1,"adress":"test","mainImage":"https://via.placeholder.com/300.png/09f/fff "}, {"squarefeet":'50',"id":1,"adress":"test","mainImage":"https://via.placeholder.com/300.png/09f/fff "} , {"squarefeet":'50',"id":1,"adress":"test","mainImage":"https://via.placeholder.com/300.png/09f/fff "}, {"squarefeet":'50',"id":1,"adress":"test","mainImage":"https://via.placeholder.com/300.png/09f/fff "}]
-Category2 = [{"squarefeet":'50',"id":1,"adress":"test","mainImage":"https://via.placeholder.com/300.png/09f/fff "}, {"squarefeet":'50',"id":1,"adress":"test","mainImage":"https://via.placeholder.com/300.png/09f/fff "} , {"squarefeet":'50',"id":1,"adress":"test","mainImage":"https://via.placeholder.com/300.png/09f/fff "}, {"squarefeet":'50',"id":1,"adress":"test","mainImage":"https://via.placeholder.com/300.png/09f/fff "}]
+  Category1!: any ;
+  Category2!: any ; 
+  Category3!: any ; 
 
-constructor(){
+
+
+ 
+  isCategoryThreeEmpty():boolean{
+    if(this.Category3.length == 0 ){
+      
+    return true
+    }else{
+      return false
+    }
+  }
+
+
+
+setCategoryOne() {
+  axios.get('http://localhost/tvikoBackEnd/listByCategory.php?id=1').then((res) => {
+    this.Category1 = res.data
+  })
+}
+
+
+setCategoryTwo() {
+  axios.get('http://localhost/tvikoBackEnd/listByCategory.php?id=2').then((res) => {
+    this.Category2 = res.data
+  })
+}
+setCategoryThree() {
+  axios.get('http://localhost/tvikoBackEnd/listByCategory.php?id=3').then((res) => {
+    this.Category3 = res.data
+  })
+}
+
+
+
+constructor(private categories:AdsServiceService){
   
 }
-ngOnInit() { 
+ngOnInit() {  
+this.setCategoryOne()
+this.setCategoryTwo() 
+this.setCategoryThree()
 }
 
 }
