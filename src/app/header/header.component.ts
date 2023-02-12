@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  isMenuOpen = false;
+  toggleResponsiveMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
 }

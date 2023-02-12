@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { FetchAdsService } from './fetch-ads.service';
+import { AdsServiceService } from './ads-service.service';
 
-describe('FetchAdsService', () => {
-  let service: FetchAdsService;
+describe('AdsServiceService', () => {
+  let service: AdsServiceService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(FetchAdsService);
+    service = TestBed.inject(AdsServiceService);
   });
 
   it('should be created', () => {
