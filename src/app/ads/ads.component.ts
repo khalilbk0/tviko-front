@@ -1,14 +1,20 @@
 import { Component } from '@angular/core';
-
+import axios from 'axios';
+import { Ad } from '../ad';
 @Component({
   selector: 'app-ads',
   templateUrl: './ads.component.html',
   styleUrls: ['./ads.component.css']
 })
 export class AdsComponent {
-title: string; 
-ads = [{id:1,title:'60',img:'https://via.placeholder.com/150 '},{id:1,title:'80',img:'https://via.placeholder.com/150 '},{id:1,title:'80',img:'https://via.placeholder.com/150 '},{id:1,title:'80',img:'https://via.placeholder.com/150 '}]
+ 
+Category1  = [{"squarefeet":'50',"id":1,"adress":"test","mainImage":"https://via.placeholder.com/300.png/09f/fff "}, {"squarefeet":'50',"id":1,"adress":"test","mainImage":"https://via.placeholder.com/300.png/09f/fff "} , {"squarefeet":'50',"id":1,"adress":"test","mainImage":"https://via.placeholder.com/300.png/09f/fff "}, {"squarefeet":'50',"id":1,"adress":"test","mainImage":"https://via.placeholder.com/300.png/09f/fff "}]
+Category2 = [{"squarefeet":'50',"id":1,"adress":"test","mainImage":"https://via.placeholder.com/300.png/09f/fff "}, {"squarefeet":'50',"id":1,"adress":"test","mainImage":"https://via.placeholder.com/300.png/09f/fff "} , {"squarefeet":'50',"id":1,"adress":"test","mainImage":"https://via.placeholder.com/300.png/09f/fff "}, {"squarefeet":'50',"id":1,"adress":"test","mainImage":"https://via.placeholder.com/300.png/09f/fff "}]
+
 constructor(){
-  this.title ="NEKRETNINE U TREBINJU"
+  
 }
+ngOnInit() { 
+}
+
 }

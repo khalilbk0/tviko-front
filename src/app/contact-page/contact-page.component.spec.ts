@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Ads2Component } from './ads2.component';
+import { ContactPageComponent } from './contact-page.component';
 
-describe('Ads2Component', () => {
-  let component: Ads2Component;
-  let fixture: ComponentFixture<Ads2Component>;
+describe('ContactPageComponent', () => {
+  let component: ContactPageComponent;
+  let fixture: ComponentFixture<ContactPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Ads2Component ]
+      declarations: [ ContactPageComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Ads2Component);
+    fixture = TestBed.createComponent(ContactPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

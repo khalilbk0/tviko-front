@@ -1,0 +1,139 @@
+/* DON'T COPY THIS PART !!! /////////////// */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .action-btn {
+    width: 400px;
+    max-height: 50px;
+    padding: 13px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d9a575;
+    border: none;
+    color: black;
+    font-family: "Playfair Display", serif;
+    transition: 0.2s;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .action-btn:hover {
+    width: 480px;
+    background-color: #cd8b53;
+  }
+  
+  @media only screen and (max-width: 300px) {
+    .action-btn {
+      width: 80%;
+      font-size: 12px;
+    }
+    .action-btn:hover {
+      width: 90%;
+    }
+  }
+  
+  /* COPY FROM HERE DOWN !!! ////////////////////////////////////////////////////////////////////////////////////*/
+  
+  .o-nama-back {
+    background-image: url(../../assets/o-nama-back.png);
+    background-position: center;
+    background-size: cover;
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+  
+  .o-nama-heading {
+    font-weight: 900;
+    font-size: 75px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 20px;
+  }
+  
+  .img-text {
+    display: flex;
+  }
+  
+  .about-heading {
+    font-size: 45px;
+    margin: 40px 0px;
+  }
+  
+  .about-text {
+    font-size: 21px;
+    margin-right: 45px;
+    margin-left: 10px;
+    font-weight: 500;
+  }
+  
+  .look-all {
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 110px;
+  }
+  
+  .look-all-heading {
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 50px;
+  }
+  
+  .action-btn {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  
+  .text-below {
+    margin-top: 50px;
+  }
+  
+  @media only screen and (max-width: 950px) {
+    .img-text {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .about-img {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .o-nama-heading {
+      font-size: 45px;
+    }
+  
+    .about-text {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+  
+    .action-btn {
+      width: 80%;
+      font-size: 12px;
+    }
+    .action-btn:hover {
+      width: 90%;
+    }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .look-all-heading {
+      font-size: 25px;
+    }
+  }
+  

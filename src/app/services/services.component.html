@@ -1,36 +1,50 @@
-<div class="container-fluid bg-service">
-    <div class="row pt-5 mx-auto d-flex justify-content-center  w-75">
-        <div class="col px-2  my-2 service" *ngFor="let service of services" >
-                <div class="card">
-                    <img class="card-img-top pt-3" [src]="service.icon" height="88" alt="Card image cap">
-                    <div class="card-title">
-                        <h1 class="card-text"><b>{{service.title}}</b></h1>
-                      </div>
-                    <div class="card-body">
-                      <p class="card-text">{{service.desc}}</p>
-                    </div>
-                </div>
-            
-              
-        </div>
-    </div>
-    <div class="container-fluid pt-5  bg-numbers">
-        <div class="row w-75 mx-auto py-5">
-            <div class="col borderRight">
-                <h1 class="num" >25</h1>
-                <p class="textNumber">Godina postojanja</p>
-            </div> 
-            <div class="col borderRight">
-                <h1 class="num" >30+</h1>
-                <p class="textNumber">Različitih gradova</p>
+ 
+     <div class="info">
+        <div class="info-wrapper"></div>
+        <div class="container">
+          <div class="content-wrapper center-info">
+            <div class="info-card shift">
+              <img src="../../assets/law.svg" alt="law" />
+              <h3 class="card-heading">Zakonski sigurno</h3>
+              <p class="card-text">
+                Poštovanje najviših standarda savremenog građevinarstva i primjena
+                najkvalitetnijih materijala u izgradnji objekata.
+              </p>
             </div>
-            <div class="col">
-                <h1 class="num">100+</h1>
-                <p class="textNumber">Nekretnina</p>
+  
+            <div class="info-card">
+              <img src="../../assets/keys.svg" alt="keys" />
+              <h3 class="card-heading">Tradicionalno</h3>
+              <p class="card-text">
+                25 godina iskustva uspješne prodaje stambenih, industrijskih i
+                poslovnih objekata i zemljišta.
+              </p>
             </div>
+  
+            <div class="info-card shift">
+              <img src="../../assets/house.svg" alt="house" />
+              <h3 class="card-heading">Kvalitetno</h3>
+              <p class="card-text">
+                Najviši standardi savremenog građevinarstva i primjena
+                najkvalitetnijih materijala u izgradnji objekata.
+              </p>
+            </div>
+  
+            <div class="info-card">
+              <img src="../../assets/building.svg" alt="building" />
+              <h3 class="card-heading">Profesionalno</h3>
+              <p class="card-text">
+                Maksimalna predanost naših radnika garantuje poštovanje svih
+                ugovorenih obaveza. Posvećenost našim klijentima je na prvom
+                mjestu.
+              </p>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
+    
     <div class="container-fluid mt-5 px-4">
+        
         <div class="row">
             <h2>MJESTO GDJE NAS MOŽETE PRONAĆI</h2>
         </div>
@@ -38,11 +52,13 @@
 
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23451.524863552906!2d18.329201349473387!3d42.71556412090101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134c692fa1cc47b7%3A0x24bb6f016f857b65!2zVnVrYSBLYXJhZMW-acSHYSAyMywg0KLRgNC10LHQuNGa0LU!5e0!3m2!1ssr!2sba!4v1675949344850!5m2!1ssr!2sba" width="80%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        
-<app-contact-comp></app-contact-comp>
+         
 
     </div>
-    
+    <div class="container-fluid mt-5 px-5">
+
+        <app-contact-comp></app-contact-comp>
+    </div>
 <app-footer></app-footer>
  
-</div>
+ 

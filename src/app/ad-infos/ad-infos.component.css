@@ -1,0 +1,84 @@
+main{
+    background-image: url('../../assets/bg-category.png'); 
+    margin-top: -50px;
+ 
+}
+h1{
+
+font-family: 'Playfair Display';
+ 
+
+color: #000000;
+}
+ 
+ 
+
+.mainImage{
+    width: 100%;
+}
+.sf h1{
+padding: 3%;
+color: white;
+background: #231F20;
+}
+h2{
+    font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 500;
+font-size: 21px;
+line-height: 28px;
+/* identical to box height */
+
+letter-spacing: 0.04em;
+
+}
+.social{
+    margin: 5%;
+}
+.rooms{border: 2px solid #CD8B53 ; 
+    padding: 15%;font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #231F20; }
+
+    .stage{ 
+        padding: 15%;font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 29px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #231F20; }
+
+        .StructureText{
+    
+            background-color: #CD8B53!important;
+            
+            font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 21px;
+letter-spacing: 0.04em;
+padding: 5%!important;
+margin-right: 5% !important;
+text-align: center;
+            }        .StructureElement{
+                background: rgba(104, 104, 104, 0.3);
+                
+                font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+    padding: 5%!important;
+    margin-right: 5% !important;
+    text-align: center;
+                }
+.other{
+    background: rgba(35, 31, 32, 0.5);
+}

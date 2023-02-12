@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Ad } from '../ad';
-import axios from 'axios' ;
+import axios from 'axios' ; 
 @Component({
   selector: 'app-category',
   templateUrl: './category.component.html',
@@ -17,7 +17,7 @@ export class CategoryComponent  {
   catOneSelected = false ;
   catTwoSelected = false; 
   catThreeSelecteD = false ; 
-  ads : Ad[] | undefined ; 
+  ads : any | undefined ; 
   get startIndex() {
     return (this.currentPage - 1) * this.resultsPerPage;
   }
@@ -60,18 +60,7 @@ export class CategoryComponent  {
     }
     
   }
-  async fetchById(id:string){
-    axios.get('https://jsonplaceholder.typicode.com/comments/')
-    .then(response => {
-       this.ads = response.data
-       this.results = response.data
-       console.log(response.data)
-    })
-    .catch(error => {
-      console.error(error);
-    });
-  
-  }
+ 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -83,9 +72,12 @@ export class CategoryComponent  {
         console.log(this.id); // price
 
     this.changetitle() ; 
-   
+        
       }
-    );
-    this.fetchById('');
+    ); 
+    axios.get('http://localhost/tvikoBackEnd/listByCategory.php?id='+this.id).then((res) => {
+      this.results = res.data
+      console.log(res.data)
+    })
   }
 }

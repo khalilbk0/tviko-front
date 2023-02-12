@@ -97,3 +97,136 @@ padding-left: 3%;
     font-size: 2rem;
   }
 }
+
+
+.info {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.info-wrapper {
+  background-image: url("../../assets/bg-service.png");
+  background-position: center;
+  background-size: cover;
+  margin-top: 100px;
+  position: absolute;
+  height: 400px;
+  width: 100%;
+  z-index: -1;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 200px 0px 0px 0px;
+}
+
+.info-card {
+  width: 250px;
+  background-color: #fff;
+  border: 5px solid #cd8b53;
+  height: 370px;
+  padding: 5px 30px 35px 30px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0px 15px;
+}
+
+.shift {
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.card-heading {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .info-wrapper {
+    height: 600px;
+  }
+
+  .info-card {
+    width: 180px;
+    background-color: #fff;
+    border: 5px solid #cd8b53;
+    height: 300px;
+    padding: 5px 20px 25px 20px;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .card-heading {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .card-text {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .info-wrapper {
+    height: 600px;
+  }
+
+  .info-card {
+    width: 150px;
+    background-color: #fff;
+    border: 5px solid #cd8b53;
+    height: 250px;
+    padding: 5px 7px 15px 7px;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .info-card > img {
+    height: 64px;
+    width: 64px;
+  }
+
+  .card-heading {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+
+  .card-text {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 383px) {
+  .info-wrapper {
+    height: 900px;
+  }
+
+  .info-card {
+    width: 90%;
+    background-color: #fff;
+    border: 5px solid #cd8b53;
+    height: 370px;
+    padding: 5px 20px 25px 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px 10px;
+  }
+
+  .card-heading {
+    font-size: 25px;
+  }
+
+  .info-card > img {
+    height: 82px;
+    width: 82px;
+  }
+
+  .card-text {
+    font-size: 16px;
+  }
+}

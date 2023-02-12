@@ -1,38 +1,129 @@
- 
-  <div class="container-fluid pb-5 ">
-  <div class="row">
-    <div class="col p-5 w-50 mx-auto">
-        <h1> {{title}} </h1>
-       </div>
-  </div> 
-    
- 
-  <div class="row w-75 mx-auto">
-    <div class="col-sm-6 col-lg-3 d-flex justify-content-center" *ngFor="let ad of ads">
-        <div class="card my-2" style="width: 18rem;">
-            <img class="card-img-top" [src]="ad.img" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">{{ad.title}} m2</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> 
-            </div>
-          </div>
-    </div> 
-    
-    </div>      
+<div class="all-sections section2">
+  <div class="container">
+    <h2 class="section-h">NEKRETNINE U TREBINJU</h2>
 
-    <div class="d-flex justify-content-center">
-        <a href="/a" id="goto" class="px-5">
-            POGLEDAJTE SVE NEKRETNINE <svg class="arrow" width="36" height="33" viewBox="0 0 36 33" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <rect width="36" height="33" fill="url(#pattern0)"/>
-              <defs>
-              <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-              <use xlink:href="#image0_340_123" transform="matrix(0.015625 0 0 0.0170455 0 -0.0454545)"/>
-              </pattern>
-              <image id="image0_340_123" width="64" height="64" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAABuwAAAbsBOuzj4gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIiSURBVHic7Zm9axRBGIefnxEE86HRJJYXCFhb+oGVgkUEwe5Ikz6Vf0CakL8iTbCytbG3EUuLFHKBFFoLqZPmtTC35JLZuzln797s3DwwcMvNsL/3YXdmdldmxixzyzuAN0WAdwBvigDvAN4UAd4BvCkCvAN4UwR4B/CmCPAO4E0R4B3Am9YLkPRaUk/SsaTNsce3/YWIpB7w+OLwHHhjZl+jx2cg4GoBp8AzM+vFjG/9LRBgGfgiaSWmc44CADaAz5LujOqYqwCAF8ChJA3rlLMAgC6wN6xDjpNgiG0z+xj643bDeSaGpPvAeqDFcCDpV2h5vDFXwJAC++1e4imCy+PUBEyhwBhOgKdm9qfK1ZSAG1JgDN+AV2Z2BmMIaFGBMXwCtszMqkkwswJH0eXf7bAL8BI4AmwGW1fAD+BJks/2cpT7TnAkc8BP4DkQ9fSUGR+qVUDSI8KTX+ei3Z1+vomyb2a74yyDawxKWb9yPN98xolRLYNNboRWuS6m3zrAQiMnSuf/NkKpSHpIWEz/9+IUYkxuK5yKpAeEb69+W0o8he/DUCpDdqrvIobXvi1ujYA6Ul+IzMJGaL+ueMj/CqiWu9rxGQsYWO5qx2cq4NpyV0eOc8ApsBlTPOQh4PjS73Pgfex3QchDwA7wG/gOvB3nyzBkMAekksMVkEQR4B3AmyLAO4A3RYB3AG+KAO8A3hQB3gG8KQK8A3hTBHgH8OYvCvcBnO4nlMAAAAAASUVORK5CYII="/>
-              </defs>
-              </svg>
-              
+    <div class="ad-wrapper nek-u-tr">
+      <div *ngFor="let ad of Category1" class="ad u-tr">
+        <a href="/adInfo?id={{ad.id}}" style="text-decoration: none">
+          <img
+            [src]="ad.mainImage"
+            alt="ad-photo"
+          />
+          <div class="square-feet-num">{{ad.squarefeet}} m2</div>
+          <div class="ad-adress">{{ad.adress}}</div>
         </a>
+      </div>
+ 
     </div>
-    
-</div> 
+
+    <button class="action-btn">
+      POGLEDAJTE SVE NEKRETNINE
+      <img src="../../assets//right-arrow (1) 1.png" alt="arrow" />
+    </button>
+
+    <img src="../../assets//Tviko 2.png" class="ad-dec" alt="" />
+
+    <div class="nek-izvan-tr">
+      <h2 class="section-h">NEKRETNINE IZVAN TREBINJA</h2>
+
+      <div class="ad-wrapper">
+         
+
+        <div class="ad u-tr" *ngFor="let ad2 of Category2">
+          <a href="/adInfo?id={{ad2.id}}" style="text-decoration: none">
+            <img
+              src="{{ad2.mainImage}}"
+              alt="ad-photo"
+            />
+            <div class="square-feet-num">{{ad2.squarefeet}} m2</div>
+            <div class="ad-adress">{{ad2.adress}}</div>
+          </a>
+        </div>
+      </div>
+
+      <button class="action-btn">
+        POGLEDAJTE SVE NEKRETNINE
+        <img src="../../assets//right-arrow (1) 1.png" alt="arrow" />
+      </button>
+    </div>
+
+    <h2
+      class="section-h nek-u-izg"
+      style="
+        text-align: center;
+        color: rgb(36, 36, 36);
+        margin-top: 150px;
+        margin-bottom: 100px;
+      "
+    >
+      NOVE NEKRETNINE U IZGRADNJI USKORO...
+    </h2>
+
+    <div class="nek-u-izg none">
+      <h2 class="section-h">NEKRETNINE U IZGRADNJI</h2>
+
+      <div class="ad-wrapper ad-u-izg">
+        <div class="ad u-tr">
+          <a href="#" style="text-decoration: none">
+            <img
+              src="../../assets//52967810_2105082689579593_2253021800600436736_n.png"
+              alt="ad-photo"
+            />
+            <div class="square-feet-num">60 m2</div>
+            <div class="ad-adress">Voja Danilovica bb</div>
+          </a>
+        </div>
+
+        <div class="ad u-tr">
+          <a href="#" style="text-decoration: none">
+            <img
+              src="../../assets//52967810_2105082689579593_2253021800600436736_n.png"
+              alt="ad-photo"
+            />
+            <div class="square-feet-num">60 m2</div>
+            <div class="ad-adress">Voja Danilovica bb</div>
+          </a>
+        </div>
+
+        <div class="ad u-tr">
+          <a href="#" style="text-decoration: none">
+            <img
+              src="../../assets//52967810_2105082689579593_2253021800600436736_n.png"
+              alt="ad-photo"
+            />
+            <div class="square-feet-num">60 m2</div>
+            <div class="ad-adress">Voja Danilovica bb</div>
+          </a>
+        </div>
+
+        <div class="ad u-tr">
+          <a href="#" style="text-decoration: none">
+            <img
+              src="../../assets//52967810_2105082689579593_2253021800600436736_n.png"
+              alt="ad-photo"
+            />
+            <div class="square-feet-num">60 m2</div>
+            <div class="ad-adress">Voja Danilovica bb</div>
+          </a>
+        </div>
+
+        <img
+          src="../../assets//ad-dec.png"
+          alt="ad-card-dec"
+          class="ad-card-dec"
+        />
+      </div>
+
+      <button class="action-btn">
+        POGLEDAJTE SVE NEKRETNINE
+        <img src="../../assets//right-arrow (1) 1.png" alt="arrow" />
+      </button>
+    </div>
+    <div class="ads-back">
+      <img
+        src="../../assets//istockphoto-1288292255-612x612 2.png"
+        alt="ads-back"
+      />
+    </div>
+  </div>
+</div>

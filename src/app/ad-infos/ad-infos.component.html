@@ -1,0 +1,108 @@
+<main>
+    <div class="wrap"></div> 
+  
+    <div class="px-4 py-5 my-5  w-75" bis_skin_checked="1"> 
+      <h1 class="display-5 fw-bold px-5">NEKRETNINE</h1>
+      
+    </div>
+   
+  </main>
+  
+  <app-divider></app-divider>
+
+  <div class="container-fluid">
+    <div class="row mx-5">
+        <div class="col-lg-4">
+            <owl-carousel-o [options]="customOptions" >
+                <ng-container *ngFor="let slide of dynamicSlides">
+                  <ng-template carouselSlide >
+                    <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title">
+                  </ng-template>
+                </ng-container>
+              </owl-carousel-o>
+        </div> 
+        <div class="col-4">
+            <div class="sf mx-auto   w-50">
+                <h1 class="py-1 m-1">
+                    {{ad.squarefeet}} m2 
+                </h1>   
+                <h2 class="py-1 m-1">
+                    {{ad.adress}} 
+                </h2>  
+                <a href="">
+
+                    <img src="../../assets/fb.png" height="48" class="social" />
+                </a>   <a href="">
+
+                    <img src="../../assets/ig.png" height="48" class="social" />
+                </a>   <a href="">
+
+                    <img src="../../assets/whatsap.png" height="48" class="social" />
+                </a>  
+                <h2 class="py-1 mt-3 rooms">
+                    {{ad.rooms}} 
+                </h2>          <h2 class="py-1 mt-3 stage">
+                    {{ad.stage}} 
+                </h2> 
+                <div class="w-75 pt-5 mt-5">
+                    <h2 style="font-family: 'Playfair Display';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 25px;
+                    line-height: 33px;
+                    letter-spacing: 0.1em;
+                    
+                    color: #000000;">Opis:</h2>
+                    <p style="font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 19px;
+                    line-height: 23px;
+                    letter-spacing: 0.1em;
+                    
+                    color: #000000;"> {{ad.description}}</p>
+                </div>
+              
+            </div>
+        
+           </div> <div class="col-4">
+            <h2 class="fs-3">
+                Struktura soba
+            </h2>
+            <div class="row w-75">
+                <div class="col-6">
+                    <h1 class="StructureText">Prostorije</h1>
+                </div>
+                <div class="col-6">
+                    
+                    <h1 class="StructureText">Kvadratura</h1>
+                </div>
+                <div class="col-6">
+                    <h1 class="StructureElement">Kuhinja</h1>
+                </div><div class="col-6">
+                    <h1 class="StructureElement">{{ad.structure.kitchen}} m²</h1>
+                </div>
+                <div class="col-6">
+                    <h1 class="StructureElement other">Dnevna soba</h1>
+                </div><div class="col-6">
+                    <h1 class="StructureElement other">{{ad.structure.lRoom}} m²</h1>
+                </div>
+                <div class="col-6">
+                    <h1 class="StructureElement ">Spavaca soba</h1>
+                </div><div class="col-6">
+                    <h1 class="StructureElement">{{ad.structure.Broom}} m²</h1>
+                </div>  <div class="col-6">
+                    <h1 class="StructureElement other">Djecija soba</h1>
+                </div><div class="col-6">
+                    <h1 class="StructureElement other">{{ad.structure.Kroom}} m²</h1>
+                </div>
+                <div class="col-6">
+                    <h1 class="StructureElement">Ukupno:</h1>
+                </div><div class="col-6">
+                    <h1 class="StructureElement">{{ad.squarefeet}} m²</h1>
+                </div>
+            </div>
+          
+           </div>
+    </div>
+  </div>
