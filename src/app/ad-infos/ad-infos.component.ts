@@ -14,8 +14,8 @@ export class AdInfosComponent {
   slidesStore : any[] = [] ;
   customOptions: OwlOptions = {
     loop: true,
-    mouseDrag: false,
-    touchDrag: false,
+    mouseDrag: true,
+    touchDrag: true,
     pullDrag: false,
     dots: true,
     
@@ -36,7 +36,14 @@ export class AdInfosComponent {
     },
     nav: false
   } 
-
+preview(src:string){ 
+  this.imagePreview = src
+  this.isOpened = true
+}
+closeModal(){
+  this.imagePreview = "" ; 
+  this.isOpened = false
+}
   dynamicSlides = [
     {
       id: 1,
@@ -70,6 +77,8 @@ export class AdInfosComponent {
     },
   ];
   id : string | undefined;
+  imagePreview !: string ;
+  isOpened = false ; 
   ad :any ;
   constructor(private route: ActivatedRoute) { 
 
@@ -79,8 +88,15 @@ export class AdInfosComponent {
       console.log(params); // { orderby: "price" }
       this.id = params['id'];
       console.log(this.id); // price
+      const API_KEY = "Tviko1998Trebinje"
+      const instance = axios.create({
+         
+        headers: {
+          'Authorization': `Bearer ${API_KEY}`
+        }
+      });
 
-      axios.get('http://localhost:1234/ad.php?id='+this.id).then((res) => {
+      instance.get('http://localhost/ad.php?id='+this.id).then((res) => {
         this.ad = res.data[0]
         var slides = {
           id: 1 , 
@@ -89,7 +105,15 @@ export class AdInfosComponent {
         }
         res.data[0].otherImages ; 
         this.slidesStore?.push(slides) 
-        console.log(this.ad);  
+        for (let i = 0; i < res.data[0].otherImages.length; i++) {
+        
+          var el = {
+            id: 1 + Math.random() , 
+            src:res.data[0].otherImages[i] ,
+            title:''
+          }
+          this.slidesStore.push(el)
+        }
         
       })
       

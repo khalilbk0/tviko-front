@@ -9,14 +9,18 @@
   </main>
   
   <app-divider></app-divider>
-
+  <div id="myModal" class="modal" [ngClass]="{'d-block' : isOpened }"  >
+    <span class="close" (click)="closeModal()" >&times;</span>
+    <img class="modal-content"  src="{{imagePreview}}">
+</div>
   <div class="container-fluid" *ngIf="ad !== undefined">
+
     <div class="row mx-5">
         <div class="col-lg-4" >
-            <owl-carousel-o [options]="customOptions" >
+            <owl-carousel-o [options]="customOptions"  >
                 <ng-container *ngFor="let slide of slidesStore">
                   <ng-template carouselSlide >
-                    <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title">
+                    <img [src]="slide.src"   (click)="preview(slide.src);" [alt]="slide.alt" [title]="slide.title" class="imgSlide">
                   </ng-template>
                 </ng-container>
               </owl-carousel-o>

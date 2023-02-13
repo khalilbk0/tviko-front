@@ -5,9 +5,9 @@ import { Ad } from './ad';
   providedIn: 'root'
 })
 export class AdsServiceService { 
-  AdsOne : any ;
-
-
+    config = {
+    headers: { Authorization: `Bearer  Tviko1998Trebinje` }
+};
  
   constructor() {   
   }

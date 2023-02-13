@@ -15,11 +15,10 @@
       </div>
  
     </div>
-
-    <button class="action-btn">
+    <a href="/category?id=1"  class="action-btn text-decoration-none"  >
       POGLEDAJTE SVE NEKRETNINE
       <img src="../../assets//right-arrow (1) 1.png" alt="arrow" />
-    </button>
+    </a>
 
     <img src="../../assets//Tviko 2.png" class="ad-dec" alt="" />
 
@@ -41,13 +40,13 @@
         </div>
       </div>
 
-      <button class="action-btn">
+      <a href="/category?id=2"  class="action-btn text-decoration-none"  >
         POGLEDAJTE SVE NEKRETNINE
         <img src="../../assets//right-arrow (1) 1.png" alt="arrow" />
-      </button>
+      </a>
     </div>
 
-    <h2
+    <h2 [ngClass]="{'none': !isCategoryThreeEmpty}"
       class="section-h nek-u-izg"
       style="
         text-align: center;
@@ -62,56 +61,20 @@
     <div class="nek-u-izg " [ngClass]="{'none': isCategoryThreeEmpty}">
       <h2 class="section-h">NEKRETNINE U IZGRADNJI</h2>
 
-      <div class="ad-wrapper ad-u-izg">
-        <div class="ad u-tr">
-          <a href="#" style="text-decoration: none">
+      <div class="ad-wrapper">
+         
+
+        <div class="ad u-tr" *ngFor="let ad3 of Category3">
+          <a href="/adInfo?id={{ad3.id}}" style="text-decoration: none">
             <img
-              src="../../assets//52967810_2105082689579593_2253021800600436736_n.png"
+              src="{{ad3.mainImage}}"
               alt="ad-photo"
+              
             />
-            <div class="square-feet-num">60 m2</div>
-            <div class="ad-adress">Voja Danilovica bb</div>
+            <div class="square-feet-num">{{ad3.squarefeet}} m2</div>
+            <div class="ad-adress">{{ad3.adress}}</div>
           </a>
         </div>
-
-        <div class="ad u-tr">
-          <a href="#" style="text-decoration: none">
-            <img
-              src="../../assets//52967810_2105082689579593_2253021800600436736_n.png"
-              alt="ad-photo"
-            />
-            <div class="square-feet-num">60 m2</div>
-            <div class="ad-adress">Voja Danilovica bb</div>
-          </a>
-        </div>
-
-        <div class="ad u-tr">
-          <a href="#" style="text-decoration: none">
-            <img
-              src="../../assets//52967810_2105082689579593_2253021800600436736_n.png"
-              alt="ad-photo"
-            />
-            <div class="square-feet-num">60 m2</div>
-            <div class="ad-adress">Voja Danilovica bb</div>
-          </a>
-        </div>
-
-        <div class="ad u-tr">
-          <a href="#" style="text-decoration: none">
-            <img
-              src="../../assets//52967810_2105082689579593_2253021800600436736_n.png"
-              alt="ad-photo"
-            />
-            <div class="square-feet-num">60 m2</div>
-            <div class="ad-adress">Voja Danilovica bb</div>
-          </a>
-        </div>
-
-        <img
-          src="../../assets//ad-dec.png"
-          alt="ad-card-dec"
-          class="ad-card-dec"
-        />
       </div>
 
       <button class="action-btn">

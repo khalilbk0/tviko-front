@@ -16,40 +16,61 @@ export class AdsComponent {
 
 
  
-  isCategoryThreeEmpty():boolean{
-    if(this.Category3.length == 0 ){
-      
-    return true
-    }else{
-      return false
-    }
-  }
+  isCategoryThreeEmpty = true  ; 
+   
 
 
 
 setCategoryOne() {
-  axios.get('http://localhost:1234/listByCategory.php?id=1').then((res) => {
-    this.Category1 = res.data
-    console.log(res.data)
+
+  const API_KEY = "Tviko1998Trebinje"
+  const instance = axios.create({
+     
+    headers: {
+      'Authorization': `Bearer ${API_KEY}`
+    }
+  });
+  instance.get('http://localhost/listByCategory.php?id=1').then((res) => {
+    this.Category1 = res.data 
   })
 }
+
+
 
 
 setCategoryTwo() {
-  axios.get('http://localhost:1234/listByCategory.php?id=2').then((res) => {
-    this.Category2 = res.data
+  const API_KEY = "Tviko1998Trebinje"
+  const instance = axios.create({
+     
+    headers: {
+      'Authorization': `Bearer ${API_KEY}`
+    }
+  });
+  instance.get('http://localhost/listByCategory.php?id=2').then((res) => {
+    this.Category2 = res.data 
   })
 }
 setCategoryThree() {
-  axios.get('http://localhost:1234/listByCategory.php?id=3').then((res) => {
-    this.Category3 = res.data
+
+  const API_KEY = "Tviko1998Trebinje"
+  const instance = axios.create({
+     
+    headers: {
+      'Authorization': `Bearer ${API_KEY}`
+    }
+  });
+  instance.get('http://localhost/listByCategory.php?id=3').then((res) => {
+    this.Category3 = res.data 
+    if(res.data.length  > 0 ){
+      this.isCategoryThreeEmpty = false
+    }
   })
+  
 }
 
 
 
 constructor(private categories:AdsServiceService){
-  
 }
 ngOnInit() {  
 this.setCategoryOne()
