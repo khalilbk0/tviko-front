@@ -19,7 +19,12 @@ export class AdsComponent {
   isCategoryThreeEmpty = false  ; 
    
 
-
+  shortAdress(adress:string){
+    if(adress.length > 20){
+      return adress.substring(0,20) + "..."
+    }
+    else return adress
+  }
 
 setCategoryOne() {
 
@@ -34,6 +39,9 @@ setCategoryOne() {
     this.Category1 = res.data 
   }) */
 
+ 
+
+
 this.Category1 = [{
   "id": "0",
   "squarefeet": "60",
@@ -42,7 +50,7 @@ this.Category1 = [{
 }, {
   "id": "0",
   "squarefeet": "60",
-  "adress": "Republike Srpske 1",
+  "adress": "short adress short adress short adress",
   "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
 } , {
   "id": "0",
