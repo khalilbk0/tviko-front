@@ -36,10 +36,40 @@ export class AdInfosComponent {
     },
     nav: false
   } 
+  arrayPreview!: string[];
 preview(src:string){ 
   this.imagePreview = src
   this.isOpened = true
 }
+nextImage(){ 
+  const arrayOfPics : string[] = [];
+   const el = (this.slidesStore.filter(element => element.src == this.imagePreview))
+   this.slidesStore.map(el => {
+    arrayOfPics.push(el.src)
+   })  
+   let index = arrayOfPics.indexOf(this.imagePreview)
+   if(arrayOfPics[index+1] !== undefined) {
+    this.imagePreview = arrayOfPics[index+1]
+   }else{
+    this.imagePreview = arrayOfPics[0]
+   }
+   
+  }
+  prevImage(){ 
+    const arrayOfPics : string[] = [];
+     const el = (this.slidesStore.filter(element => element.src == this.imagePreview))
+     this.slidesStore.map(el => {
+      arrayOfPics.push(el.src)
+     })  
+     let index = arrayOfPics.indexOf(this.imagePreview)
+     if(arrayOfPics[index-1] !== undefined) {
+      this.imagePreview = arrayOfPics[index-1]
+     }else{
+      this.imagePreview = arrayOfPics[arrayOfPics.length-1]
+     }
+     
+    }
+ 
 closeModal(){
   this.imagePreview = "" ; 
   this.isOpened = false
@@ -84,10 +114,9 @@ closeModal(){
 
 
     this.route.queryParams
-    .subscribe(params => {
-      console.log(params); // { orderby: "price" }
+    .subscribe(params => { 
       this.id = params['id'];
-      console.log(this.id); // price
+      
       const API_KEY = "Tviko1998Trebinje"
       const instance = axios.create({
          
@@ -96,6 +125,24 @@ closeModal(){
         }
       });
 
+    if(params["id"] == "0") {
+      this.ad = {
+        "id": "70",
+        "squarefeet": "60",
+        "adress": "Republike Srpske 1", 
+        "rooms": "četvorosob",
+        "description": "Lorem Ipsum text",
+        "stage": "II", 
+        "structure": {
+          "kitchen": "120",
+          "lRoom": "150",
+          "Broom": "11",
+          "Kroom": "12",
+          "Btroom": "150"
+      }
+      }
+      this.slidesStore = [{id:0,src:'https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg',title:'test'},{id:0,src:'https://images.adsttc.com/media/images/5ecd/d50b/b357/65c6/7300/009e/medium_jpg/02D.jpg?1590547704',title:'test'},{id:0,src:'https://images.adsttc.com/media/images/5ecd/d4ac/b357/65c6/7300/009d/large_jpg/02C.jpg?1590547607',title:'test'}]
+    }else{
       instance.get('http://localhost/ad.php?id='+this.id).then((res) => {
         this.ad = res.data[0]
         var slides = {
@@ -116,6 +163,7 @@ closeModal(){
         }
         
       })
+    }
       
     }
   ); 

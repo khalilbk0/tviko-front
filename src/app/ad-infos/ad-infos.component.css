@@ -111,8 +111,27 @@ text-align: center;
     max-width: 700px;
     height: 80%;
     max-height: auto;
+    
+  }
+  .next { 
+    color: white;
   }
   
+  .round { 
+    cursor: pointer;
+    font-size: 5em;  
+    padding-left: 1%;
+    padding-right: 1%;
+    color: #EBE6E4; 
+    text-decoration: none;
+    transition: 300ms; 
+    -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  }
+  .round:hover{
+    color: #1f1f1f;
+  }
   /* Caption of Modal Image */
   #caption {
     margin: auto;
@@ -160,12 +179,19 @@ text-align: center;
     text-decoration: none;
     cursor: pointer;
   }
+
   
   /* 100% Image Width on Smaller Screens */
   @media only screen and (max-width: 700px){
     .modal-content {
       width: 100%;
     }
+    .strucStyle{
+      padding-top: 15%;
+      padding-bottom: 15%;
+      text-align: center;
+    }
+    .divStruct{
+      margin: auto;
+    }
   }
-      
-      

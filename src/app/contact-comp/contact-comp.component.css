@@ -79,9 +79,19 @@ color: #000000;
  position: absolute;
  right: 0;
 }
+.socialIcons{
+    width: 25%;
+}
 
 @media only screen and (max-width: 800px) {
     .bg-contact{  
          display: none;
        }
+       .mobileContact{
+        width: 100%;
+        text-align: center;
+       }
+       .socialIcons{
+        width: 100%;
+    }
   }
