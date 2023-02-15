@@ -28,7 +28,7 @@
 
 .owl-carousel .owl-stage:after {
   content: ".";
-  display: block;
+  display: block!important;
   clear: both;
   visibility: hidden;
   line-height: 0;
@@ -59,7 +59,7 @@
 }
 
 .owl-carousel .owl-item img {
-  display: block;
+  display: block!important;
   width: 100%
 }
 
@@ -70,7 +70,7 @@
 
 .no-js .owl-carousel,
 .owl-carousel.owl-loaded {
-  display: block
+  display: block!important
 }
 
 .owl-carousel .owl-dot,
@@ -96,7 +96,7 @@
 
 .owl-carousel.owl-loading {
   opacity: 0;
-  display: block
+  display: block!important
 }
 
 .owl-carousel.owl-hidden {
@@ -265,7 +265,7 @@
   height: 10px;
   margin: 5px 7px;
   background: #D6D6D6;
-  display: block;
+  display: block!important;
   -webkit-backface-visibility: visible;
   transition: opacity .2s ease;
   border-radius: 30px

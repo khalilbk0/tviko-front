@@ -7,120 +7,165 @@
     </div>
    
   </main>
-  
   <app-divider></app-divider>
-  <div id="myModal" class="modal" [ngClass]="{'d-block' : isOpened }" >
-    <span class="close" (click)="closeModal()" >&times;</span>
-    <img class="modal-content img-fluid"  src="{{imagePreview}}" height="20px" (click)="nextImage()" > 
-    <div class="row text-center  mx-auto w-100">
-        <div class="row d-inline">
-            <a (click)="prevImage()"  class="previous round">&#8249;</a>
-<a  (click)="nextImage()" class="next round">&#8250;</a>
-        </div>
-    </div>
-</div>
-  <div class="container-fluid" *ngIf="ad !== undefined">
+  <div class="container" *ngIf="ad !== undefined"> 
+    <div class="ad-info-wrapper">
+        <div id="myModal" class="modal" [ngClass]="{' d-inline  text-center' : isOpened }" >
+            <span class="close" (click)="closeModal()" >&times;</span>
+          
+            <div class="modal-contentd-flex justify-content-center" >
 
-    <div class="row mx-5">
-        <div class="col-lg-4 py-4" >
-            <owl-carousel-o [options]="customOptions"  >
-                <ng-container *ngFor="let slide of slidesStore">
-                  <ng-template carouselSlide >
-                    <img [src]="slide.src"   (click)="preview(slide.src);" [alt]="slide.alt" [title]="slide.title" class="imgSlide">
+                <a (click)="prevImage()"  class="previous round">&#8249;</a>
+                <img class="img-fluid prevImage"  src="{{imagePreview}}" height="20px" (click)="nextImage()" > 
+
+        <a  (click)="nextImage()" class="next round">&#8250;</a>
+            </div>
+            <div class="row text-center  mx-auto w-100">
+                <div class="row d-inline">
+                </div>
+            </div>
+        </div>
+      <div class="gallery">
+        <div class="py-4 mx-auto w-50 d-block" >
+            <owl-carousel-o [options]="customOptions"  class="carousel">
+                <ng-container *ngFor="let slide of slidesStore"  >
+                    
+                  <ng-template carouselSlide > 
+                    <div class="carousel-item">
+                        
+                    <img [src]="slide.src"  class="imgSlide"  (click)="preview(slide.src);" [alt]="slide.alt" [title]="slide.title" >
+                    </div>
+                 
                   </ng-template>
                 </ng-container>
               </owl-carousel-o>
         </div> 
-        <div class="col-lg-4 col-12">
-            <div class="sf mx-auto   w-50 w-100-mobile">
-                <h1 class="py-1 m-1 text-center">
-                    {{ad.squarefeet}} m2 
-                </h1>   
-                <h2 class="py-1 m-1">
-                    {{ad.adress}} 
-                </h2>  
-                <a href="">
+      </div>
+      <div class="info">
+        <div class="squarefeet">{{ad.squarefeet}} m2</div>
 
-                    <img src="../../assets/fb.png" height="48" class="social" />
-                </a>   <a href="">
+        <div class="address">{{ad.adress}}</div>
 
-                    <img src="../../assets/ig.png" height="48" class="social" />
-                </a>   <a href="">
+        <div class="socials">
+          <a href="https://www.instagram.com/tvikotrebinje/">
+            <img src="../../assets/instagram (1).png" alt="instagram" />
+          </a>
 
-                    <img src="../../assets/whatsap.png" height="48" class="social" />
-                </a>  
-                <h2 class="py-1 mt-3 rooms">
-                    {{ad.rooms}} 
-                </h2>          <h2 class="py-1 mt-3 stage">
-                   Stage : {{ad.stage}} 
-                </h2> 
-                <div class="w-100">
-                    <h2 style="font-family: 'Playfair Display';
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 25px;
-                    line-height: 33px;
-                    letter-spacing: 0.1em;
-                    
-                    color: #000000;">Opis:</h2>
-                    <p style="font-family: 'Montserrat';
-                    font-style: normal;
-                    font-weight: 500;
-                    font-size: 14px;
-                    line-height: 23px;
-                    width: 100%!important;
-                    letter-spacing: 0.1em;
-                    
-                    color: #000000;"> {{ad.description}}</p>
-                </div>
-              
-            </div>
-        
-           </div> <div class="col-lg-4 col-12 strucStyle" *ngIf="ad.structure !== null" >
-            <h2 class="fs-3">
-                Struktura soba
-            </h2>
-            <div class="row w-75 divStruct">
-                <div class="col-6">
-                    <h1 class="StructureText">Prostorije</h1>
-                </div>
-                <div class="col-6">
-                    
-                    <h1 class="StructureText">Kvadratura</h1>
-                </div>
-                <div class="col-6">
-                    <h1 class="StructureElement">Kuhinja</h1>
-                </div><div class="col-6">
-                    <h1 class="StructureElement">{{ad.structure.kitchen}} m²</h1>
-                </div>
-                <div class="col-6">
-                    <h1 class="StructureElement other">Dnevna soba</h1>
-                </div><div class="col-6">
-                    <h1 class="StructureElement other">{{ad.structure.lRoom}} m²</h1>
-                </div>
-                <div class="col-6">
-                    <h1 class="StructureElement  ">Spavaca soba</h1>
-                </div><div class="col-6">
-                    <h1 class="StructureElement">{{ad.structure.Broom}} m²</h1>
-                </div>  <div class="col-6">
-                    <h1 class="StructureElement other">Djecija soba</h1>
-                </div><div class="col-6">
-                    <h1 class="StructureElement other">{{ad.structure.Kroom}} m²</h1>
-                </div>
-                <div class="col-6">
-                    <h1 class="StructureElement other">Kupatilo</h1>
-                </div><div class="col-6">
-                    <h1 class="StructureElement other">{{ad.structure.Kroom}} m²</h1>
-                </div>
-                
-                <div class="col-6">
-                    <h1 class="StructureElement">Ukupno:</h1>
-                </div><div class="col-6">
-                    <h1 class="StructureElement">{{ad.squarefeet}} m²</h1>
-                </div>
-            </div>
-          
-           </div>
+          <a
+            href="https://www.facebook.com/tvikotrebinje/photos/?ref=page_internal&mt_nav=0&paipv=0&eav=AfZLNIf9x94UD5uqNEiYSArTScYKOxUpmZoqUf3FEkuBVFH_n-jHUZiD-6X6NnzUvCg&_rdr"
+          >
+            <img src="../../assets/facebook.png" alt="facebook" />
+          </a>
+
+          <a href="#" class="wa">
+            <img src="../../assets/whatsap.png" height="32px" alt="whatsapp" />
+          </a>
+        </div>
+
+        <h2 class="number-of-rooms">{{ad.rooms}}</h2>
+
+        <div class="floor">{{ad.stage}}</div>
+      </div>
+
+      <div class="room-structure">
+        <h3 class="str-h">Struktura soba</h3>
+        <div class="table">
+          <table>
+            <tr>
+              <th class="cell t-heading">Prostorije</th>
+              <th class="cell t-heading">Kvadratura</th>
+            </tr>
+            <tr>
+              <td class="cell row-lighter">Kuhinja</td>
+              <td class="cell row-lighter">{{ad.structure.kitchen}} m2</td>
+            </tr>
+            <tr>
+              <td class="cell row-darker">Dnevna soba</td>
+              <td class="cell row-darker">{{ad.structure.lRoom}} m2</td>
+            </tr>
+            <tr>
+              <td class="cell row-lighter">Spavaca soba</td>
+              <td class="cell row-lighter">{{ad.structure.Broom}} m2</td>
+            </tr>
+            <tr>
+              <td class="cell row-darker">Djecija soba</td>
+              <td class="cell row-darker">{{ad.structure.Kroom}} m2</td>
+            </tr>
+            <tr>
+              <td class="cell row-lighter">Kupatilo</td>
+              <td class="cell row-lighter">{{ad.structure.Kroom}} m2</td>
+            </tr>
+            <tr>
+              <td class="cell row-darker">Ukupno:</td>
+              <td class="cell row-darker">150 m2</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="description">
+        <h3 class="des-h">Opis:</h3>
+        <p class="description-text"> 
+            {{ad.description}}
+        </p>
+      </div>
     </div>
+
+    <h2 class="co-h">
+      Kontaktirajte nas sada i saznajte <br> više o ovoj nekretnini!
+    </h2>
+
+    <div class="contact-infos-wrapper">
+     
+          <div>
+            <h4 class="info-h">KONTAKT TELEFON</h4>
+            <p class="info-text">+387 (0)65 379 162</p>
+            <p class="info-text">+387 (0)66 940 924</p>
+          </div>
+
+          <div>
+            <h4 class="info-h">DRUŠTVENE MREŽE</h4>
+            <a class="social-cont" href="https://www.facebook.com/tvikotrebinje/photos/?ref=page_internal&mt_nav=0&paipv=0&eav=AfZLNIf9x94UD5uqNEiYSArTScYKOxUpmZoqUf3FEkuBVFH_n-jHUZiD-6X6NnzUvCg&_rdr"
+              ><img src="../../assets/facebook.png" alt="fb"
+            /></a>
+            <a class="social-cont" href="https://www.instagram.com/tvikotrebinje/"
+              ><img src="../../assets/instagram (1).png" alt="insta"
+            /></a>
+            <a class="social-cont"
+              ><img src="../../assets/whatsap.png" height="36" alt="wa"
+            /></a>
+          </div>
+
+          <div>
+            <h4 class="info-h">KONTAKT TELEFON</h4>
+            <p class="info-text">Radnim danima: 07:00 - 17:00</p>
+            <p class="info-text">Radno vrijeme: 07:00 - 15:00</p>
+          </div>
+      
+    </div>
+
+    <button class="action-btn" style="margin-top: 70px
+    ">
+      JAVITE NAM SE PUTEM EMAILA <img src="../../assets/arrow.png" alt="arrow" />
+    </button>
+
+
+    
+  
   </div>
+  <div class="look-all">
+    <div class="container">
+
+      <h2 class="look-all-heading">POGLEDAJTE SVE NEKRETNINE</h2>
+      <button class="action-btn">
+        POGLEDAJTE SVE <img src="../../assets/arrow.png" alt="arrow" />
+      </button>
+    </div>
+
+    <img src="../../assets/right-back.png" alt="back-img" class="right-back">
+    <img src="../../assets/left-back.png" alt="back-img2" class="left-back">
+  </div>
+ 
+  <div class="container-fluid mt-5">
+
   <app-footer></app-footer>
+  </div>

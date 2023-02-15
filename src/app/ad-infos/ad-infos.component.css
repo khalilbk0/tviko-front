@@ -3,95 +3,16 @@ main{
     margin-top: -50px;
  
 }
-h1{
-
-font-family: 'Playfair Display';
+ 
+ 
+ 
  
 
-color: #000000;
-}
- 
-.fluid-appear{
-    transition: 9s;
-}
+  
+.imgSlide{   
+  height: 100px; 
+  display: block!important;
 
-.mainImage{
-    width: 100%;
-}
-.sf h1{
-padding: 3%;
-color: white;
-background: #231F20;
-}
-h2{
-    font-family: 'Playfair Display';
-font-style: normal;
-font-weight: 500;
-font-size: 21px;
-line-height: 28px;
-/* identical to box height */
-
-letter-spacing: 0.04em;
-
-}
-.social{
-    margin: 5%;
-}
-.rooms{border: 2px solid #CD8B53 ; 
-    padding: 15%;font-style: normal;
-    font-weight: 700;
-    font-size: 1.5em;
-    line-height: 29px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: #231F20; }
-
-    .stage{ 
-        padding: 15%;font-style: normal;
-        font-weight: 700;
-        font-size: 22px;
-        line-height: 29px;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        color: #231F20; }
-
-        .StructureText{
-    
-            background-color: #CD8B53!important;
-            
-            font-family: 'Playfair Display';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 21px;
-letter-spacing: 0.04em;
-padding: 5%!important;
-margin-right: 5% !important;
-text-align: center;
-            }        .StructureElement{
-                background: rgba(104, 104, 104, 0.3);
-                
-                font-family: 'Playfair Display';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 21px;
-    letter-spacing: 0.04em;
-    padding: 5%!important;
-    margin-right: 5% !important;
-    text-align: center;
-    height:  40px;
-                }
-.other{
-    background: rgba(35, 31, 32, 0.5);
-}
-
-.imgSlide{ 
-    width: auto;
-    
-    float: left; 
-    height: 300px;
-    object-fit: cover;
 }
 .modal {
     display: none; /* Hidden by default */
@@ -115,7 +36,7 @@ text-align: center;
     max-width: 700px;
     height: 80%;
     max-height: auto;
-    
+    background-color: red;
   }
   .next { 
     color: white;
@@ -137,16 +58,7 @@ text-align: center;
     color: #1f1f1f;
   }
   /* Caption of Modal Image */
-  #caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-  }
+   
   
   /* Add Animation */
   .modal-content, #caption {  
@@ -192,82 +104,513 @@ text-align: center;
     .modal-content {
       width: 100%;
     }
-    .rooms{
-      font-size: 1em;
-      padding: 9%;
-    }
-    .strucStyle{
-      padding-top: 15%;
-      padding-bottom: 15%;
-      text-align: center;
-    }
-    .divStruct{
-      margin: auto;
-      width: 100% !important;
-    }
-    .social{
-      width: 16px;
-      height: 16px;
-    }
-    .w-100-mobile{
-      width: 100% !important;
-    }
-
-    .social{
-      height: 24px;
-    }
-    .rooms{
-      font-size: 15px;
-    }
-    .stage{
-       
-      font-size:16px;
-      }
+    
   }
 
   .carousel {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    position: relative;
+    height: 400px;
+    width: 50vh; 
+    display: block;
+    overflow: hidden;  
   }
   
-  .carousel-item {
-    height: 100%;
+  .carousel-item { 
+    display: grid;
+    grid-area: gallery;
+    height: 400px;
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
-    left: 0;
+    left: 0;  
+    overflow: hidden;
   }
   
   .carousel-item img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    object-position: center;
   } 
-  
+   
   
   @media only screen and (max-width: 450px){
     .modal-content {
       width: 100%;
     }
-    .strucStyle{
-      padding-top: 15%;
-      padding-bottom: 15%;
-      text-align: center;
-    }
-    .divStruct{
-      margin: auto;
-    }
+     
+  }
 
-    .social{
-      height: 24px;
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .decor {
+    width: 100%;
+    height: auto;
+  }
+  
+  .ad-info-wrapper {
+    display: grid;
+    grid-template-areas:
+      "gallery info room-str"
+      "gallery des des";
+  }
+  
+  .info {
+    grid-area: info;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .room-structure {
+    grid-area: room-str;
+    margin: 20px;
+  }
+  
+  .description {
+    grid-area: des;
+    margin: 20px;
+  }
+  
+  .decor {
+    margin-top: 45px;
+    margin-bottom: 45px;
+  }
+  
+  .squarefeet {
+    padding: 8px 40px;
+    font-size: 25px;
+    font-family: sans-serif;
+    background-color: #231f20;
+    color: white;
+    max-width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .address {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: 500;
+  }
+  
+  .socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .socials a {
+    margin-right: 20px;
+  }
+  
+  .number-of-rooms {
+    margin-bottom: 30px;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 1px;
+    border: 2px solid #cb8b53;
+    text-align: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .floor {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .cell {
+    text-align: center;
+    padding: 15px 35px;
+  }
+  
+  .t-heading {
+    background-color: #cd8b53;
+  }
+  
+  .row-lighter {
+    font-weight: 700;
+    letter-spacing: 1px;
+    background-color: rgba(104, 104, 104, 30%);
+  }
+  
+  .row-darker {
+    letter-spacing: 1px;
+    font-weight: 700;
+    background-color: rgba(35, 31, 32, 40%);
+  }
+  
+  table {
+    border-spacing: 7px;
+  }
+  
+  .des-h {
+    font-size: 25px;
+  
+    margin-bottom: 20px;
+  }
+  
+  .description-text {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+  
+  .description {
+    margin-bottom: 40px;
+  }
+  
+  .info-text {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  .social-cont {
+    margin-right: 7%;
+  }
+  
+  .informations div {
+    margin-bottom: 90px;
+  }
+  
+  .info {
+    margin-left: 7%;
+  }
+  
+  .info-h {
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #a65f23;
+    margin-bottom: 30px;
+  }
+  
+  .contact-infos-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  
+  .contact-infos-wrapper div {
+    margin: 10px;
+  }
+  
+  .co-h {
+    margin-top: 100px;
+    font-size: 45px;
+    text-align: center;
+  }
+  
+  .look-all {
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 200px;
+    position: relative;
+  }
+  
+  .right-back {
+    position: absolute;
+    top: 10%;
+    right: 0;
+  }
+  
+  .left-back {
+    position: absolute;
+    top: 10%;
+    left: 0;
+  }
+  
+  .look-all-heading {
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 50px;
+  }
+  
+  .action-btn {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  
+  .text-below {
+    margin-top: 50px;
+  }
+  
+  .action-btn {
+    width: 400px;
+    max-height: 50px;
+    padding: 13px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d9a575;
+    border: none;
+    color: black;
+    font-family: "Playfair Display", serif;
+    transition: 0.2s;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .action-btn:hover {
+    width: 480px;
+    background-color: #cd8b53;
+  }
+  
+  @media only screen and (max-width: 300px) {
+    .action-btn {
+      width: 80%;
+      font-size: 12px;
     }
-    .rooms{
-      font-size: 10px;
+    .action-btn:hover {
+      width: 90%;
     }
-    .stage{
-       
-      font-size:16px;
-      }
+  }
+  
+  @media only screen and (max-width: 1800px) {
+    .number-of-rooms {
+      font-size: 1vw;
+    }
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    .left-back {
+      height: 200px;
+      width: 250px;
+      top: 20%;
+    }
+  
+    .right-back {
+      height: 200px;
+      width: 250px;
+      top: 20%;
+    }
+  }
+  
+  @media only screen and (max-width: 1100px) {
+    .ad-info-wrapper {
+      grid-template-areas:
+        "gallery info"
+        "gallery room-str"
+        "des des";
+    }
+  
+    .number-of-rooms {
+      font-size: 13px;
+      display: flex;
+      justify-content: center;
+      max-width: 50%;
+      word-wrap: break-word;
+      flex-wrap: wrap;
+    }
+  
+    .left-back,
+    .right-back {
+      height: 150px;
+      width: 200px;
+      top: 30%;
+    }
+  }
+  
+  @media only screen and (max-width: 950px) {
+    .contact-infos-wrapper {
+      justify-content: center;
+    }
+  
+    .contact-infos-wrapper div {
+      margin: 25px;
+    }
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .ad-info-wrapper {
+      grid-template-areas:
+        "gallery gallery"
+        "info room-str"
+        "des des";
+    }
+  
+    .left-back,
+    .right-back {
+      display: none;
+    }
+  
+     
+  
+    .number-of-rooms {
+      font-size: 1.5vw;
+      max-width: 250px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media only screen and (max-width: 670px) {
+    .co-h {
+      font-size: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 550px) {
+    .ad-info-wrapper {
+      display: block;
+    }
+  
+    .gallery {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      width: 100%;
+      height: auto;
+    }
+  
+    .gallery img { 
+      display: block;
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+  
+    .room-structure {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+  
+    .number-of-rooms {
+      font-size: 15px;
+    }
+  
+    .co-h {
+      font-size: 25px;
+    }
+  }
+  
+  @media only screen and (max-width: 400px) {
+    .action-btn {
+      width: 80%;
+      font-size: 12px;
+    }
+    .action-btn:hover {
+      width: 90%;
+    }
+  
+    .look-all-heading {
+      font-size: 25px;
+    }
+  }
+  
+  @media only screen and (max-width: 350px) {
+    .room-structure {
+      margin-left: 0px;
+    }
+  }
+  
+  @media only screen and (max-width: 350px) {
+    .cell {
+      text-align: center;
+      padding: 10px 20px;
+      font-size: small;
+    }
+  
+    .t-heading {
+      background-color: #cd8b53;
+    }
+  
+    .row-lighter {
+      font-weight: 700;
+      letter-spacing: 1px;
+      background-color: rgba(104, 104, 104, 30%);
+    }
+  
+    .row-darker {
+      letter-spacing: 1px;
+      font-weight: 700;
+      background-color: rgba(35, 31, 32, 40%);
+    }
+  
+    table {
+      border-spacing: 7px;
+    }
+  }
+  
+  @media only screen and (max-width: 300px) {
+    .co-h {
+      margin-top: 40px;
+    }
+  
+    .contact-infos-wrapper {
+      margin-top: 30px;
+    }
+  }
+  
+  @media only screen and (max-width: 270px) {
+    .info-h {
+      font-size: 17px;
+    }
+  
+    .info-text {
+      font-size: 18px;
+    }
+  
+    .social-cont img {
+      width: 32px;
+    }
+  }
+  
+  @media only screen and (max-width: 250px) {
+    .description-text {
+      font-size: 15px;
+    }
+  
+    .des-h {
+      font-size: 18px;
+    }
+  }
+  
+  @media only screen and (max-width: 230px) {
+    .socials a {
+      margin-right: 20px;
+    }
+  
+    .wa {
+      margin-right: 0px;
+    }
+  
+    .cell {
+      text-align: center;
+      padding: 5px 10px;
+      font-size: small;
+    }
+  
+    table {
+      border-spacing: 7px;
+    }
+  }
+  
+  @media only screen and (max-width: 200px) {
+    .number-of-rooms {
+      font-size: 12px;
+    }
+  }
+
+  .prevImage{
+    width: 50%;
   }

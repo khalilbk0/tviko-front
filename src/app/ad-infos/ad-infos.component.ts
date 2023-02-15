@@ -13,7 +13,7 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 export class AdInfosComponent {
   slidesStore : any[] = [] ;
   customOptions: OwlOptions = {
-    loop: true,
+    loop: false,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: false,
@@ -34,7 +34,7 @@ export class AdInfosComponent {
         items: 1
       }
     },
-    nav: false
+    nav: true,  
   } 
   arrayPreview!: string[];
 preview(src:string){ 
@@ -141,7 +141,7 @@ closeModal(){
           "Btroom": "150"
       }
       }
-      this.slidesStore = [{id:0,src:'https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg',title:'test'},{id:0,src:'https://images.adsttc.com/media/images/5ecd/d50b/b357/65c6/7300/009e/medium_jpg/02D.jpg?1590547704',title:'test'},{id:0,src:'https://images.adsttc.com/media/images/5ecd/d4ac/b357/65c6/7300/009d/large_jpg/02C.jpg?1590547607',title:'test'}]
+      this.slidesStore = [{id:0,src:'https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg',title:'test'},{id:0,src:'https://images.adsttc.com/media/images/5ecd/d50b/b357/65c6/7300/009e/medium_jpg/02D.jpg?1590547704',title:'test'},{id:4,src:'https://images.adsttc.com/media/images/5ecd/d4ac/b357/65c6/7300/009d/large_jpg/02C.jpg?1590547607',title:'test'}]
     }else{
       instance.get('http://localhost/ad.php?id='+this.id).then((res) => {
         this.ad = res.data[0]
