@@ -13,10 +13,12 @@ import { ContactCompComponent } from './contact-comp/contact-comp.component';
 import { FooterComponent } from './footer/footer.component';
 import { CategoryComponent } from './category/category.component';
 import { AdInfosComponent } from './ad-infos/ad-infos.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'; 
-import { CarouselModule } from 'ngx-owl-carousel-o';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';  
 import { AboutUsComponent } from './about-us/about-us.component';
-import { ContactPageComponent } from './contact-page/contact-page.component';
+import { ContactPageComponent } from './contact-page/contact-page.component'; 
+import { GalleryModule } from 'ng-gallery';
+import { CarouselModule } from '@coreui/angular';
+import { GALLERY_CONFIG } from 'ng-gallery';
 
 @NgModule({
   declarations: [
@@ -35,12 +37,25 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
     ContactPageComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, 
     BrowserAnimationsModule,
     CarouselModule,
-    AppRoutingModule
+    GalleryModule,
+    AppRoutingModule,  
   ],
-  providers: [],
+  providers: [
+    {
+      provide: GALLERY_CONFIG,
+      useValue: {
+        thumb:false,
+        counter:false,
+        dots: true,
+        dotsSize:12 ,
+        loadingStrategy: "lazy" ,
+        imageSize: 'cover' , 
+      }
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

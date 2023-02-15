@@ -614,3 +614,13 @@ main{
   .prevImage{
     width: 50%;
   }
+ 
+  gallery{
+    background-color: transparent;
+  }
+  .g-dot-inner{
+    background-color: grey!important;
+  }
+  .gallery{
+    width: 80%;
+  }

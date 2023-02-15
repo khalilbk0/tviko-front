@@ -25,21 +25,9 @@
                 </div>
             </div>
         </div>
-      <div class="gallery"> 
-        <div class="py-4 mx-auto w-50 d-block" >
-            <owl-carousel-o [options]="customOptions"  class="carousel">
-                <ng-container *ngFor="let slide of slidesStore"  >
-                    
-                  <ng-template carouselSlide > 
-                    <div class="carousel-item">
-                        
-                    <img [src]="slide.src"  class="imgSlide"  (click)="preview(slide.src);" [alt]="slide.alt" [title]="slide.title" >
-                    </div>
-                 
-                  </ng-template>
-                </ng-container>
-              </owl-carousel-o>
-        </div> 
+      <div class="gallery "> 
+        <gallery class="background-color:transparent" [items]="slidesStore"  thumbPosition="left" ></gallery>
+        
       </div>
       <div class="info">
         <div class="squarefeet">{{ad.squarefeet}} m2</div>
