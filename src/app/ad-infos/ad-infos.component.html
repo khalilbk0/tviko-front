@@ -21,12 +21,12 @@
 </div>
   <div class="container-fluid" *ngIf="ad !== undefined">
 
-    <div class="row mx-1">
+    <div class="row mx-5">
         <div class="col-lg-4 py-4" >
             <owl-carousel-o [options]="customOptions"  >
                 <ng-container *ngFor="let slide of slidesStore">
                   <ng-template carouselSlide >
-                    <img [src]="slide.src"   (click)="preview(slide.src);" height="auto" [alt]="slide.alt" [title]="slide.title" class="imgSlide  ">
+                    <img [src]="slide.src"   (click)="preview(slide.src);" [alt]="slide.alt" [title]="slide.title" class="imgSlide">
                   </ng-template>
                 </ng-container>
               </owl-carousel-o>
@@ -54,7 +54,7 @@
                 </h2>          <h2 class="py-1 mt-3 stage">
                    Stage : {{ad.stage}} 
                 </h2> 
-                <div class="w-75  ">
+                <div class="w-100">
                     <h2 style="font-family: 'Playfair Display';
                     font-style: normal;
                     font-weight: 500;
@@ -66,8 +66,9 @@
                     <p style="font-family: 'Montserrat';
                     font-style: normal;
                     font-weight: 500;
-                    font-size: 19px;
+                    font-size: 14px;
                     line-height: 23px;
+                    width: 100%!important;
                     letter-spacing: 0.1em;
                     
                     color: #000000;"> {{ad.description}}</p>
@@ -98,7 +99,7 @@
                     <h1 class="StructureElement other">{{ad.structure.lRoom}} m²</h1>
                 </div>
                 <div class="col-6">
-                    <h1 class="StructureElement ">Spavaca soba</h1>
+                    <h1 class="StructureElement  ">Spavaca soba</h1>
                 </div><div class="col-6">
                     <h1 class="StructureElement">{{ad.structure.Broom}} m²</h1>
                 </div>  <div class="col-6">
