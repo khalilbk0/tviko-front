@@ -80,6 +80,7 @@ text-align: center;
     padding: 5%!important;
     margin-right: 5% !important;
     text-align: center;
+    height:  40px;
                 }
 .other{
     background: rgba(35, 31, 32, 0.5);
@@ -181,6 +182,8 @@ text-align: center;
 
   
   /* 100% Image Width on Smaller Screens */
+ 
+
   @media only screen and (max-width: 700px){
     .modal-content {
       width: 100%;
@@ -193,4 +196,62 @@ text-align: center;
     .divStruct{
       margin: auto;
     }
+
+    .social{
+      height: 24px;
+    }
+    .rooms{
+      font-size: 15px;
+    }
+    .stage{
+       
+      font-size:16px;
+      }
+  }
+
+  .carousel {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel-item {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  } 
+  
+  
+  @media only screen and (max-width: 450px){
+    .modal-content {
+      width: 100%;
+    }
+    .strucStyle{
+      padding-top: 15%;
+      padding-bottom: 15%;
+      text-align: center;
+    }
+    .divStruct{
+      margin: auto;
+    }
+
+    .social{
+      height: 24px;
+    }
+    .rooms{
+      font-size: 10px;
+    }
+    .stage{
+       
+      font-size:16px;
+      }
   }
