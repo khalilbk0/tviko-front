@@ -40,7 +40,7 @@ letter-spacing: 0.04em;
 .rooms{border: 2px solid #CD8B53 ; 
     padding: 15%;font-style: normal;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 1.5em;
     line-height: 29px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -87,6 +87,10 @@ text-align: center;
 
 .imgSlide{ 
     width: auto;
+    
+    float: left; 
+    height: 300px;
+    object-fit: cover;
 }
 .modal {
     display: none; /* Hidden by default */
@@ -185,6 +189,10 @@ text-align: center;
     .modal-content {
       width: 100%;
     }
+    .rooms{
+      font-size: 1em;
+      padding: 9%;
+    }
     .strucStyle{
       padding-top: 15%;
       padding-bottom: 15%;
@@ -192,5 +200,13 @@ text-align: center;
     }
     .divStruct{
       margin: auto;
+      width: 100% !important;
+    }
+    .social{
+      width: 16px;
+      height: 16px;
+    }
+    .w-100-mobile{
+      width: 100% !important;
     }
   }

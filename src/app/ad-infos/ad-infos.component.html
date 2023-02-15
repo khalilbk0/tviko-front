@@ -11,7 +11,7 @@
   <app-divider></app-divider>
   <div id="myModal" class="modal" [ngClass]="{'d-block' : isOpened }" >
     <span class="close" (click)="closeModal()" >&times;</span>
-    <img class="modal-content"  src="{{imagePreview}}" (click)="nextImage()" > 
+    <img class="modal-content img-fluid"  src="{{imagePreview}}" height="20px" (click)="nextImage()" > 
     <div class="row text-center  mx-auto w-100">
         <div class="row d-inline">
             <a (click)="prevImage()"  class="previous round">&#8249;</a>
@@ -21,19 +21,19 @@
 </div>
   <div class="container-fluid" *ngIf="ad !== undefined">
 
-    <div class="row mx-5">
+    <div class="row mx-1">
         <div class="col-lg-4 py-4" >
             <owl-carousel-o [options]="customOptions"  >
                 <ng-container *ngFor="let slide of slidesStore">
                   <ng-template carouselSlide >
-                    <img [src]="slide.src"   (click)="preview(slide.src);" [alt]="slide.alt" [title]="slide.title" class="imgSlide">
+                    <img [src]="slide.src"   (click)="preview(slide.src);" height="auto" [alt]="slide.alt" [title]="slide.title" class="imgSlide  ">
                   </ng-template>
                 </ng-container>
               </owl-carousel-o>
         </div> 
         <div class="col-lg-4 col-12">
-            <div class="sf mx-auto   w-50">
-                <h1 class="py-1 m-1">
+            <div class="sf mx-auto   w-50 w-100-mobile">
+                <h1 class="py-1 m-1 text-center">
                     {{ad.squarefeet}} m2 
                 </h1>   
                 <h2 class="py-1 m-1">
