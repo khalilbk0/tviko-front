@@ -443,10 +443,25 @@ main{
     .ad-info-wrapper {
       grid-template-areas:
         "gallery gallery"
-        "info room-str"
+        "info info"
         "des des";
     }
-  
+    .ad-info-wrapper {
+      display: inline-block;
+      width: 100%;
+    }
+    .onlyMobile{
+      display: flex;
+      margin: auto;
+      margin-left: 5%;
+    }
+    .gallery {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      width: 100%;
+      height: auto;
+    }
     .left-back,
     .right-back {
       display: none;
@@ -473,13 +488,18 @@ main{
     .ad-info-wrapper {
       display: block;
     }
-  
+    .onlyMobile{
+      display: block;
+    }
     .gallery {
       margin-left: auto;
       margin-right: auto;
       text-align: center;
-      width: 100%;
+  margin: auto;
+  width: 60%;
+  text-align: center;
       height: auto;
+      font-size: 2em;
     }
   
     .gallery img { 
