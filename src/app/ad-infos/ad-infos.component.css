@@ -624,3 +624,6 @@ main{
   .gallery{
     width: 80%;
   }
+  .gallery-item, .gallery-image, .gallery-thumb .gallery-image{
+    transition: 100m;
+  }

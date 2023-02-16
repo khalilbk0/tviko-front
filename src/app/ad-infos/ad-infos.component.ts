@@ -12,7 +12,7 @@ import { GalleryItem, ImageItem } from 'ng-gallery';
 })
 export class AdInfosComponent {
   slidesStore : any[] = [] ;
-   
+  galleryId = 'myLightbox'
   arrayPreview!: string[];
 preview(src:string){ 
   this.imagePreview = src

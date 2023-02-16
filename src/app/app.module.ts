@@ -51,7 +51,7 @@ import { GALLERY_CONFIG } from 'ng-gallery';
         counter:false,
         dots: true,
         dotsSize:12 ,
-        loadingStrategy: "lazy" ,
+        loadingStrategy: "preload" ,
         imageSize: 'cover' , 
       }
     }
