@@ -16,14 +16,16 @@ export class AdInfosComponent {
   slidesStore : any[] = [] ;
   galleryId = 'myLightbox'
   arrayPreview!: string[];
-preview(src:string){ 
+   
+public preview(src:string){ 
   this.imagePreview = src
   this.isOpened = true
 }
 me(){ 
   let gallery = document.querySelectorAll('.g-slider-content gallery-image img') ;
-  let currentIndex = document.querySelector('gallery-item')
-  console.log(currentIndex?.getAttribute('ng-reflect-curr-index'))
+  let currentIndex = document.querySelector('gallery-item') 
+  let intIndex = currentIndex?.getAttribute('ng-reflect-curr-index')
+  alert(intIndex)
 }
 nextImage(){ 
   const arrayOfPics : string[] = [];
@@ -124,6 +126,15 @@ closeModal(){
 
   ngOnInit() { 
  
-
   }
+  ngAfterViewInit() {
+    
+    this.elementRef.nativeElement.querySelectorAll('gallery-image').forEach((el:any) => {
+      el.addEventListener("click" ,  () => {
+        this.preview(el.querySelector('img').getAttribute('src'))
+      } ) 
+    }); 
+  } 
 }
+ 
+
