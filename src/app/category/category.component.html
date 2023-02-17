@@ -20,7 +20,7 @@
 
       <div class="ad-wrapper nek-u-tr " *ngFor="let result of results | slice:startIndex:endIndex">
         <div class="ad u-tr">
-          <a href="#" style="text-decoration: none">
+          <a href="/adInfo?id={{result.id}}" style="text-decoration: none">
             <img
               src="{{result.mainImage}}"
               alt="ad-photo"
