@@ -21,17 +21,12 @@ public preview(src:string){
   this.imagePreview = src
   this.isOpened = true
 }
-me(){ 
-  let gallery = document.querySelectorAll('.g-slider-content gallery-image img') ;
-  let currentIndex = document.querySelector('gallery-item') 
-  let intIndex = currentIndex?.getAttribute('ng-reflect-curr-index')
-  alert(intIndex)
-}
+ 
 nextImage(){ 
-  const arrayOfPics : string[] = [];
+  const arrayOfPics : any[] = [];
    const el = (this.slidesStore.filter(element => element.src == this.imagePreview))
    this.slidesStore.map(el => {
-    arrayOfPics.push(el.src)
+    arrayOfPics.push(el.data.src)
    })  
    let index = arrayOfPics.indexOf(this.imagePreview)
    if(arrayOfPics[index+1] !== undefined) {
@@ -42,10 +37,10 @@ nextImage(){
    
   }
   prevImage(){ 
-    const arrayOfPics : string[] = [];
+    const arrayOfPics : any[] = [];
      const el = (this.slidesStore.filter(element => element.src == this.imagePreview))
      this.slidesStore.map(el => {
-      arrayOfPics.push(el.src)
+      arrayOfPics.push(el.data.src)
      })  
      let index = arrayOfPics.indexOf(this.imagePreview)
      if(arrayOfPics[index-1] !== undefined) {
@@ -96,7 +91,7 @@ closeModal(){
           "Btroom": "150"
       }
       }
-      this.slidesStore = [new ImageItem({ src: 'https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg', thumb: 'https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg' }), new ImageItem({ src: 'https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg', thumb: 'https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg' }) , new ImageItem({ src: 'https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg', thumb: 'https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg' }) , new ImageItem({ src: 'https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg', thumb: 'https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg' })]
+      this.slidesStore = [new ImageItem({ src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPCXISA7AWonO3J24GKCgtJ9e4OTuaJHSBM7rcN3j28GfR6eJAJTe1Gi_AlJpG6wuFnCs&usqp=CAU', thumb: 'https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg' }), new ImageItem({ src: 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80' }) , new ImageItem({ src: 'https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg', thumb: 'https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg' }) , new ImageItem({ src: 'https://images.ctfassets.net/hrltx12pl8hq/3j5RylRv1ZdswxcBaMi0y7/b84fa97296bd2350db6ea194c0dce7db/Music_Icon.jpg', thumb: 'https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg' })]
     }else{
       instance.get('http://localhost/ad.php?id='+this.id).then((res) => {
         this.ad = res.data[0]
@@ -132,8 +127,9 @@ closeModal(){
     this.elementRef.nativeElement.querySelectorAll('gallery-image').forEach((el:any) => {
       el.addEventListener("click" ,  () => {
         this.preview(el.querySelector('img').getAttribute('src'))
-      } ) 
+      }) 
     }); 
+  
   } 
 }
  

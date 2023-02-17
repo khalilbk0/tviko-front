@@ -1,72 +1,393 @@
-main{
-    background-image: url('../../assets/bg-category.png'); 
-    margin-top: -50px;
- 
-}
-h1{
-
-font-family: 'Playfair Display';
-font-style: normal;
-font-weight: 900;
-font-size: 76px;
-line-height: 101px;
-text-align: center;
-letter-spacing: 0.05em;
-
-color: #000000;
-}
-a{ 
-width: 75%;
-height: 53px; 
-padding: 10px;
-text-decoration: none;
-background: #D9A575;
-font-family: 'Playfair Display';
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 27px;
-/* identical to box height */
-
-letter-spacing: 0.05em;
-
-color: #000000;
-}
-.selected,a:hover{
-
-    background: #A65F23;
-}
-.footer{
-     
-    margin: 0 auto;
-    left: 0;
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* ///////////////////////////// */
+  
+  .none {
+    display: none;
+  }
+  
+  .section-h {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 45px;
+  }
+  
+  .section2 {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .nek-izvan-tr {
+    margin-top: 30px;
+  }
+  
+  .ad-dec {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
     width: 100%;
-    height: 100%;
-    position: absolute;
-}
-.AD{
-    background-color: transparent;
+    height: auto;
+  }
+  
+  .ad {
+    max-width: 250px;
+    border: 2px solid #e3e3e3;
+    overflow: hidden;
+    font-family: "Playfair Display", serif;
+    margin: 20px 10px;
+    background-color: #fff;
+  }
+  
+  .ad:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 00.3s;
+  }
+  
+  .ad img {
+    height: 50%;
     width: 100%;
-    height: 100%;
-    transition: 500ms;
-}
-.AD:hover{
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    scale: 1.05;
-}
-.card-title{
-    font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 27px;
-line-height: 33px;
-}
-.card-text{
-    font-family: 'Playfair Display';
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 24px;
-}
+  }
+  
+  .square-feet-num {
+    color: #000;
+    font-size: 27px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    border: 2px solid #cd8b53;
+    width: fit-content;
+    padding: 0px 5px;
+    margin: 15px 0px 15px 20px;
+  }
+  
+  .ad-adress {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    color: #000;
+  }
+  
+  .ad-wrapper {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 55px;
+  }
+  
+  .next-prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 70px;
+  }
+  
+  .page-btn {
+    padding: 13px 20px;
+    text-align: center;
+    background-color: #d9a575;
+    border: none;
+    font-family: "Playfair Display", serif;
+    transition: 0.2s;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .page-btn:hover {
+    scale: 1.1;
+    background-color: #cd8b53;
+  }
+  
+  .prev {
+    margin-right: 30%;
+  }
+  
+  .category-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 10px;
+  }
+  
+  .category-btn {
+    width: 30%;
+    padding: 13px 20px;
+    text-align: center;
+    background-color: #d9a575;
+    border: none;
+    font-family: "Playfair Display", serif;
+    transition: 0.2s;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .category-btn:hover {
+    width: 33%;
+    background-color: #cd8b53;
+  }
+  
+  .active {
+    background-color: #cd8b53;
+  }
+  
+  .re-back { 
+    background-position: center;
+    background-size: cover;
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+  
+  .re-heading {
+    font-weight: 900;
+    font-size: 75px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 20px;
+  }
+  
+  @media only screen and (max-width: 1035px) {
+    .category-btn {
+      font-size: 15px;
+    }
+  }
+  
+  @media only screen and (max-width: 927px) {
+    .category-btn {
+      font-size: 12px;
+    }
+  }
+  
+  @media only screen and (max-width: 731px) {
+    .category-btns {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .category-btn {
+      width: 80%;
+      margin-bottom: 50px;
+    }
+  
+    .category-btn:hover {
+      width: 90%;
+    }
+  }
+  
+  @media only screen and (max-width: 530px) {
+    .re-heading {
+      font-size: 45px;
+    }
+  }
+  
+  @media only screen and (max-width: 330px) {
+    .re-heading {
+      font-size: 30px;
+    }
+  }
+  
+  @media only screen and (max-width: 220px) {
+    .re-heading {
+      font-size: 20px;
+    }
+  }
+  
+  @media only screen and (max-width: 837px) {
+    .ad-wrapper {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .action-btn {
+      width: 80%;
+    }
+  
+    .action-btn:hover {
+      width: 90%;
+    }
+  
+    .section-h {
+      font-size: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 563px) {
+    .ad {
+      max-width: 200px;
+  
+      margin: 10px 5px;
+    }
+  
+    .square-feet-num {
+      color: #000;
+      font-size: 22px;
+  
+      padding: 0px 5px;
+      margin: 15px 0px 15px 20px;
+    }
+  
+    .ad-adress {
+      font-size: 16px;
+      margin-left: 20px;
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media only screen and (max-width: 443px) {
+    .ad {
+      max-width: 150px;
+      margin: 10px 5px;
+    }
+  
+    .square-feet-num {
+      color: #000;
+      font-size: 19px;
+  
+      padding: 0px 5px;
+      margin: 15px 0px 15px 10px;
+    }
+  
+    .ad-adress {
+      font-size: 14px;
+      text-align: center;
+      margin-left: 0;
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media only screen and (max-width: 330px) {
+    .page-btn {
+      font-size: 15px;
+    }
+  
+    .prev {
+      margin-right: 10%;
+    }
+  }
+  
+  @media only screen and (max-width: 343px) {
+    .ad {
+      max-width: 120px;
+      margin: 10px 5px;
+    }
+  
+    .square-feet-num {
+      color: #000;
+      font-size: 17px;
+  
+      padding: 0px 5px;
+      margin: 15px 0px 15px 10px;
+    }
+  
+    .ad-adress {
+      font-size: 12px;
+      text-align: center;
+      margin-left: 0;
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media only screen and (max-width: 300px) {
+    .action-btn {
+      width: 80%;
+      font-size: 12px;
+    }
+  
+    .action-btn:hover {
+      width: 90%;
+    }
+  }
+  
+  @media only screen and (max-width: 283px) {
+    .ad {
+      max-width: 100px;
+      margin: 10px 5px;
+    }
+  
+    .square-feet-num {
+      color: #000;
+      font-size: 15px;
+  
+      padding: 0px 5px;
+      margin: 15px 0px 15px 10px;
+    }
+  
+    .ad-adress {
+      font-size: 10px;
+      text-align: center;
+      margin-left: 0;
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media only screen and (max-width: 243px) {
+    .section-h {
+      font-size: 25px;
+    }
+  
+    .ad {
+      max-width: 85px;
+      margin: 10px 5px;
+    }
+  
+    .square-feet-num {
+      color: #000;
+      font-size: 12px;
+  
+      padding: 0px 5px;
+      margin: 15px 0px 15px 10px;
+    }
+  
+    .ad-adress {
+      font-size: 8px;
+      text-align: center;
+      margin-left: 0;
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+  
+    .page-btn {
+      font-size: 13px;
+      padding: 8px 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 214px) {
+    .ad {
+      max-width: 100%;
+      margin: 10px 5px;
+    }
+  
+    .square-feet-num {
+      color: #000;
+      font-size: 14px;
+  
+      padding: 0px 5px;
+      margin: 15px 0px 15px 10px;
+    }
+  
+    .ad-adress {
+      font-size: 12px;
+      text-align: left;
+      margin-left: 0;
+      margin-top: 15px;
+      margin-left: 10px;
+      margin-bottom: 30px;
+    }
+  }

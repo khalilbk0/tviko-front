@@ -79,5 +79,28 @@ export class CategoryComponent  {
       this.results = res.data
       console.log(res.data)
     })
-  }
+    this.results = [{
+      "id": 0,
+      "squarefeet": "60",
+      "adress": "Republike Srpske 1",
+      "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
+    }, {
+      "id": 0,
+      "squarefeet": "60",
+      "adress": "Republike Srpske 1",
+      "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
+    } , {
+      "id": 0,
+      "squarefeet": "60",
+      "adress": "Republike Srpske 1",
+      "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
+    } , 
+    {
+      "id": 0,
+      "squarefeet": "60",
+      "adress": "Republike Srpske 1",
+      "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
+    }]
+    
+  } 
 }

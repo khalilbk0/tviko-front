@@ -1,63 +1,47 @@
-<main>
-    <div class="wrap"></div> 
-  
-    <div class="px-4 py-5 my-5  w-75" bis_skin_checked="1"> 
-      <h1 class="display-5 fw-bold px-5">NEKRETNINE</h1>
-      
+<div class="re-back">
+    <div class="container">
+      <h2 class="re-heading">NEKRETNINE</h2>
     </div>
-   
-  </main>
-  <div class="container-fluid">
-    <div class="row mx-auto w-75">
-        <div class="col"  >
-            <a href="/category?id=1" [ngClass]="{'selected': catOneSelected}" > >NEKRETNINE U TREBINJU</a>
-        </div>
-        
-        <div class="col">
-            <a href="/category?id=2" [ngClass]="{'selected': catTwoSelected}">NEKRETNINE U TREBINJU</a>
-        </div>
-        
-        <div class="col">
-            <a href="/category?id=3" [ngClass]="{'selected': catThreeSelecteD}">NEKRETNINE U TREBINJU</a>
-        </div>
-        
-    </div>
-</div>
+  </div>
 
+  <div class="container">
+    <h2 class="section-h">KATEGORIJE</h2>
 
-<div class="container-fluid pt-5 mt-5 w-75">
-<div class="mx-auto px-5 mx-5">
-    
-    <div class="row">
-        
-        <div class="col-sm-6 col-lg-3 d-flex justify-content-center" *ngFor="let result of results | slice:startIndex:endIndex">
-            <div class="card my-2 AD" style="width: 18rem;">
-               <a href="/adInfo?id={{result.id}}" class="AD">
-                <img class="card-img-top" [src]="result.mainImage" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">{{result.squarefeet}} m2</h5>
-                  <p class="card-text">{{result.adress}}</p> 
-                </div>
-               </a>
-              </div>
-        </div> 
+    <div class="category-btns">
+      <a class="category-btn text-decoration-none" href="/category?id=1" [ngClass]="{'active': catOneSelected}">NEKRETNINE U TREBINJU</a>
+      <a class="category-btn text-decoration-none" href="/category?id=2" [ngClass]="{'active': catTwoSelected}" >NEKRETNINE IZVAN TREBINJA</a>
+      <a class="category-btn text-decoration-none" href="/category?id=3" [ngClass]="{'active': catThreeSelecteD}">NEKRETNINE U IZGRADNJI</a>
     </div>
-</div>
-<div class="container-fluid">
-    <div class="row mx-auto w-75 my-5 text-center">
-        <div class="col"  *ngIf="currentPage !== 1" >
-            <a   (click)="previousPage()"  > Previous </a>
+  </div>
+
+  <div class="all-sections section2">
+    <div class="container">
+      <h2 class="section-h">NEKRETNINE U TREBINJU</h2>
+
+      <div class="ad-wrapper nek-u-tr " *ngFor="let result of results | slice:startIndex:endIndex">
+        <div class="ad u-tr">
+          <a href="#" style="text-decoration: none">
+            <img
+              src="{{result.mainImage}}"
+              alt="ad-photo"
+            />
+            <div class="square-feet-num">{{result.squarefeet}} m²</div>
+            <div class="ad-adress">{{result.adress}}</div>
+          </a>
         </div>
-        
-        <div class="col" >
-            <a   (click)="nextPage()" >Next</a>
-        </div>
-        
-        
-</div>
-<div class="footer" layout-fill>
-    <app-footer></app-footer>
-</div>
-</div> 
+
+         
+
+           
  
-  
+ 
+      </div>
+      <div class="container">
+        <div class="next-prev">
+          <button class="prev page-btn">Prethodno</button>
+          <button class="next page-btn">Sledeće</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
