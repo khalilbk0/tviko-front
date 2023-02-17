@@ -5,7 +5,7 @@ main{
 }
  
  
- 
+ dis
  
 
   
@@ -189,7 +189,11 @@ main{
     margin-top: 45px;
     margin-bottom: 45px;
   }
-  
+  .onlyMobile{
+    display: contents;
+    margin: auto;
+    margin-left: 5%;
+  }
   .squarefeet {
     padding: 8px 40px;
     font-size: 25px;
@@ -396,7 +400,9 @@ main{
       width: 250px;
       top: 20%;
     }
-  
+    .gallery{
+      margin-left: 5%;
+    }
     .right-back {
       height: 200px;
       width: 250px;
@@ -411,7 +417,10 @@ main{
         "gallery room-str"
         "des des";
     }
-  
+    .description{
+      grid-area: unset;
+      margin-top: 5%;
+    }
     .number-of-rooms {
       font-size: 13px;
       display: flex;
@@ -420,7 +429,7 @@ main{
       word-wrap: break-word;
       flex-wrap: wrap;
     }
-  
+
     .left-back,
     .right-back {
       height: 150px;

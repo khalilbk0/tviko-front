@@ -4,7 +4,7 @@ import axios from 'axios' ;
 import { Router, ActivatedRoute, ParamMap, Route } from '@angular/router';
 import { AdDetails } from '../ad-details'; 
 import { GalleryItem, ImageItem } from 'ng-gallery';
-
+import { ElementRef } from '@angular/core';
 @Component({
   selector: 'app-ad-infos',
   templateUrl: './ad-infos.component.html',
@@ -17,6 +17,10 @@ export class AdInfosComponent {
 preview(src:string){ 
   this.imagePreview = src
   this.isOpened = true
+}
+me(){
+ 
+alert('ok')
 }
 nextImage(){ 
   const arrayOfPics : string[] = [];
@@ -56,7 +60,7 @@ closeModal(){
   imagePreview !: string ;
   isOpened = false ; 
   ad :any ;
-  constructor(private route: ActivatedRoute) { 
+  constructor(private route: ActivatedRoute, private elementRef: ElementRef) { 
 
 
     this.route.queryParams
