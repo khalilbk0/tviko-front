@@ -1,16 +1,18 @@
 import { Ad } from './../ad';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import axios from 'axios' ; 
 import { Router, ActivatedRoute, ParamMap, Route } from '@angular/router';
 import { AdDetails } from '../ad-details'; 
 import { GalleryItem, ImageItem } from 'ng-gallery';
 import { ElementRef } from '@angular/core';
+import { Lightbox } from 'ng-gallery/lightbox'; 
 @Component({
   selector: 'app-ad-infos',
   templateUrl: './ad-infos.component.html',
   styleUrls: ['./ad-infos.component.css']
 })
 export class AdInfosComponent {
+  @ViewChild('curr-index') galleryElement !: any;  
   slidesStore : any[] = [] ;
   galleryId = 'myLightbox'
   arrayPreview!: string[];
@@ -18,9 +20,10 @@ preview(src:string){
   this.imagePreview = src
   this.isOpened = true
 }
-me(){
- 
-alert('ok')
+me(){ 
+  let gallery = document.querySelectorAll('.g-slider-content gallery-image img') ;
+  let currentIndex = document.querySelector('gallery-item')
+  console.log(currentIndex)
 }
 nextImage(){ 
   const arrayOfPics : string[] = [];
@@ -119,8 +122,7 @@ closeModal(){
   ); 
   }
 
-  ngOnInit() {
-    
+  ngOnInit() { 
  
 
   }
