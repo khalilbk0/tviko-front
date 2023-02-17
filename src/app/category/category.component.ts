@@ -8,6 +8,12 @@ import axios from 'axios' ;
   styleUrls: ['./category.component.css']
 })
 export class CategoryComponent  { 
+  shortAdress(adress:string){
+    if(adress.length > 20){
+      return adress.substring(0,20) + "..."
+    }
+    else return adress
+  }
   @Input()
   results!: Ad[];
   currentPage = 1;

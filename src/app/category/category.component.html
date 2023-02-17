@@ -18,24 +18,28 @@
     <div class="container">
       <h2 class="section-h">NEKRETNINE U TREBINJU</h2>
 
-      <div class="ad-wrapper nek-u-tr " *ngFor="let result of results | slice:startIndex:endIndex">
-        <div class="ad u-tr">
-          <a href="/adInfo?id={{result.id}}" style="text-decoration: none">
-            <img
-              src="{{result.mainImage}}"
-              alt="ad-photo"
-            />
-            <div class="square-feet-num">{{result.squarefeet}} m²</div>
-            <div class="ad-adress">{{result.adress}}</div>
-          </a>
-        </div>
-
-         
-
+     <div class="row">
+      <div class="col"  *ngFor="let result of results | slice:startIndex:endIndex">
+        <div class="ad-wrapper nek-u-tr ">
+          <div class="ad u-tr">
+            <a href="/adInfo?id={{result.id}}" style="text-decoration: none">
+              <img
+                src="{{result.mainImage}}"
+                alt="ad-photo"
+              />
+              <div class="square-feet-num">{{result.squarefeet}} m²</div>
+              <div class="ad-adress">{{shortAdress(result.adress)}}</div>
+            </a>
+          </div>
+  
            
- 
- 
+  
+             
+   
+   
+        </div>
       </div>
+     </div>
       <div class="container">
         <div class="next-prev">
           <button class="prev page-btn">Prethodno</button>
