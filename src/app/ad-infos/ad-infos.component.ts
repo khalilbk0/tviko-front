@@ -23,7 +23,7 @@ preview(src:string){
 me(){ 
   let gallery = document.querySelectorAll('.g-slider-content gallery-image img') ;
   let currentIndex = document.querySelector('gallery-item')
-  console.log(currentIndex)
+  console.log(currentIndex?.getAttribute('ng-reflect-curr-index'))
 }
 nextImage(){ 
   const arrayOfPics : string[] = [];
