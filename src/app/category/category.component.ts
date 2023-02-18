@@ -81,7 +81,7 @@ export class CategoryComponent  {
         
       }
     ); 
-    axios.get('http://localhost/tvikoBackEnd/listByCategory.php?id='+this.id).then((res) => {
+    axios.get('https://backoffice.tvikonekretnine.com/tvikoBackEnd/listByCategory.php?id='+this.id).then((res) => {
       this.results = res.data
       console.log(res.data)
     })
