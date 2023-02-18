@@ -56,7 +56,7 @@
           <div class="floor">{{ad.stage}}</div>
         </div>
   
-        <div class="room-structure">
+        <div class="room-structure" *ngIf="ad.structure" >
           <h3 class="str-h">Struktura soba</h3>
           <div class="table">
             <table>
@@ -132,10 +132,10 @@
       
     </div>
 
-    <button class="action-btn" style="margin-top: 70px
+    <a  href="/contact" class="action-btn text-decoration-none"  style="margin-top: 70px
     ">
       JAVITE NAM SE PUTEM EMAILA <img src="../../assets/arrow.png" alt="arrow" />
-    </button>
+  </a>
 
 
     
@@ -145,9 +145,9 @@
     <div class="container">
 
       <h2 class="look-all-heading">POGLEDAJTE SVE NEKRETNINE</h2>
-      <button class="action-btn">
+      <a  href="/category?id=1" class="action-btn text-decoration-none">
         POGLEDAJTE SVE <img src="../../assets/arrow.png" alt="arrow" />
-      </button>
+      </a>
     </div>
 
     <img src="../../assets/right-back.png" alt="back-img" class="right-back">
