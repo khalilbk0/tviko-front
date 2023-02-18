@@ -6,13 +6,16 @@ import { AdDetails } from '../ad-details';
 import { GalleryItem, ImageItem } from 'ng-gallery';
 import { ElementRef } from '@angular/core';
 import { Lightbox } from 'ng-gallery/lightbox'; 
+import { Renderer2 } from '@angular/core';
+
 @Component({
+  
   selector: 'app-ad-infos',
   templateUrl: './ad-infos.component.html',
-  styleUrls: ['./ad-infos.component.css']
+  styleUrls: ['./ad-infos.component.css'] , 
+  
 })
-export class AdInfosComponent {
-  @ViewChild('curr-index') galleryElement !: any;  
+export class AdInfosComponent {  
   slidesStore : any[] = [] ;
   galleryId = 'myLightbox'
   arrayPreview!: string[];
@@ -60,7 +63,7 @@ closeModal(){
   imagePreview !: string ;
   isOpened = false ; 
   ad :any ;
-  constructor(private route: ActivatedRoute, private elementRef: ElementRef) { 
+  constructor(private route: ActivatedRoute, private elementRef: ElementRef, private renderer: Renderer2) { 
 
 
     this.route.queryParams
@@ -88,20 +91,12 @@ closeModal(){
     }else{
       instance.get('https://backoffice.tvikonekretnine.com/Ad.php?id='+this.id).then((res) => {
         this.ad = res.data[0]
-        var slides = {
-          id: 1 , 
-          src:res.data[0].mainImage ,
-          title:'Image 1'
-        }
+        var slides = new ImageItem({src:res.data[0].mainImage , thumb:res.data[0].otherImages})
         res.data[0].otherImages ; 
         this.slidesStore?.push(slides) 
         for (let i = 0; i < res.data[0].otherImages.length; i++) {
         
-          var el = {
-            id: 1 + Math.random() , 
-            src:res.data[0].otherImages[i] ,
-            title:''
-          }
+           var el = new ImageItem({src:res.data[0].otherImages[i] , thumb:res.data[0].otherImages[i]})
           this.slidesStore.push(el)
         }
         
@@ -116,14 +111,9 @@ closeModal(){
  
   }
   ngAfterViewInit() {
-    
-    this.elementRef.nativeElement.querySelectorAll('gallery-image').forEach((el:any) => {
-      el.addEventListener("click" ,  () => {
-        this.preview(el.querySelector('img').getAttribute('src'))
-      }) 
-    }); 
   
-  } 
+  }
+
 }
  
 
