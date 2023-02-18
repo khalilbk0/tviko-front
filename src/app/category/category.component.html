@@ -15,8 +15,12 @@
   </div>
 
   <div class="all-sections section2">
-    <div class="container">
-      <h2 class="section-h">NEKRETNINE U TREBINJU</h2>
+    <div class="container"  >
+      <h2 class="section-h"  *ngIf="catOneSelected">NEKRETNINE U TREBINJU</h2>
+
+      <h2 class="section-h"  *ngIf="catTwoSelected">NEKRETNINE IZVAN TREBINJA</h2>
+
+      <h2 class="section-h"  *ngIf="catThreeSelecteD">NEKRETNINE U IZGRADNJI</h2>
 
      <div class="row">
       <div class="col"  *ngFor="let result of results | slice:startIndex:endIndex">
@@ -42,8 +46,8 @@
      </div>
       <div class="container">
         <div class="next-prev">
-          <button class="prev page-btn">Prethodno</button>
-          <button class="next page-btn">Sledeće</button>
+          <button class="prev page-btn" (click)="nextPage()" >Prethodno</button>
+          <button class="next page-btn" (click)="previousPage()">Sledeće</button>
         </div>
       </div>
     </div>
