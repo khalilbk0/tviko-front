@@ -28,124 +28,56 @@ export class AdsComponent {
 
 setCategoryOne() {
 
-/*   const API_KEY = "Tviko1998Trebinje"
+  const API_KEY = "Tviko1998Trebinje"
   const instance = axios.create({
      
     headers: {
       'Authorization': `Bearer ${API_KEY}`
     }
   });
-  instance.get('http://localhost/listByCategory.php?id=1').then((res) => {
+  instance.get('https://backoffice.tvikonekretnine.com/listByCategory.php?id=1').then((res) => {
     this.Category1 = res.data 
-  }) */
+  })  
 
  
-
-
-this.Category1 = [{
-  "id": "0",
-  "squarefeet": "60",
-  "adress": "Republike Srpske 1",
-  "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
-}, {
-  "id": "0",
-  "squarefeet": "60",
-  "adress": "short adress short adress short adress",
-  "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
-} , {
-  "id": "0",
-  "squarefeet": "60",
-  "adress": "Republike Srpske 1",
-  "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
-} , 
-{
-  "id": "0",
-  "squarefeet": "60",
-  "adress": "Republike Srpske 1",
-  "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
-}]
-
+ 
 }
 
 
 
 
 setCategoryTwo() {
-/*   const API_KEY = "Tviko1998Trebinje"
+  const API_KEY = "Tviko1998Trebinje"
   const instance = axios.create({
      
     headers: {
       'Authorization': `Bearer ${API_KEY}`
     }
   });
-  instance.get('http://localhost/listByCategory.php?id=2').then((res) => {
+  instance.get('https://backoffice.tvikonekretnine.com/listByCategory.php?id=2').then((res) => {
     this.Category2 = res.data 
-  }) */
-
-  this.Category2 = [{
-    "id": "0",
-    "squarefeet": "60",
-    "adress": "Republike Srpske 1",
-    "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
-  }, {
-    "id": "0",
-    "squarefeet": "60",
-    "adress": "Republike Srpske 1",
-    "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
-  } , {
-    "id": "0",
-    "squarefeet": "60",
-    "adress": "Republike Srpske 1",
-    "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
-  } , 
-  {
-    "id": "0",
-    "squarefeet": "60",
-    "adress": "Republike Srpske 1",
-    "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
-  }]
+  })
+ 
   
 }
 setCategoryThree() {
 
-/*   const API_KEY = "Tviko1998Trebinje"
+  const API_KEY = "Tviko1998Trebinje"
   const instance = axios.create({
      
     headers: {
       'Authorization': `Bearer ${API_KEY}`
     }
   });
-  instance.get('http://localhost/listByCategory.php?id=3').then((res) => {
+  instance.get('https://backoffice.tvikonekretnine.com/listByCategory.php?id=3').then((res) => {
     this.Category3 = res.data 
     if(res.data.length  > 0 ){
       this.isCategoryThreeEmpty = false
     }
   })
-   */
+   
 
-
-  this.Category3 = [{
-    "id": "0",
-    "squarefeet": "60",
-    "adress": "Republike Srpske 1",
-    "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
-  }, {
-    "id": "0",
-    "squarefeet": "60",
-    "adress": "Republike Srpske 1",
-    "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
-  } , {
-    "id": "0",
-    "squarefeet": "60",
-    "adress": "Republike Srpske 1",
-    "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
-  } , 
-  {
-    "id": "0",
-    "squarefeet": "60",
-    "adress": "Republike Srpske 1",
-    "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
-  }]
+ 
   
 }
 
