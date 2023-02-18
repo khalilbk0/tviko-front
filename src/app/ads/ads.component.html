@@ -46,7 +46,7 @@
       </a>
     </div>
 
-    <h2 [ngClass]="{'none': !isCategoryThreeEmpty}"
+    <h2 [ngClass]="{'none': isCategoryThreeEmpty}"
       class="section-h nek-u-izg"
       style="
         text-align: center;
@@ -58,7 +58,7 @@
       NOVE NEKRETNINE U IZGRADNJI USKORO...
     </h2>
 
-    <div class="nek-u-izg " [ngClass]="{'none': isCategoryThreeEmpty}">
+    <div class="nek-u-izg " [ngClass]="{'none': !isCategoryThreeEmpty}">
       <h2 class="section-h">NEKRETNINE U IZGRADNJI</h2>
 
       <div class="ad-wrapper">

@@ -16,7 +16,7 @@ export class AdsComponent {
 
 
  
-  isCategoryThreeEmpty = false  ; 
+  isCategoryThreeEmpty = true  ; 
    
 
   shortAdress(adress:string){
