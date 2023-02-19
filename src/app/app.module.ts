@@ -19,6 +19,7 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { GalleryModule } from 'ng-gallery';
 import { CarouselModule } from '@coreui/angular';
 import { GALLERY_CONFIG } from 'ng-gallery';
+import { GallerizeDirective } from 'ng-gallery/lightbox';
 
 @NgModule({
   declarations: [
@@ -35,13 +36,16 @@ import { GALLERY_CONFIG } from 'ng-gallery';
     AdInfosComponent,
     AboutUsComponent,
     ContactPageComponent
+    
   ],
   imports: [
     BrowserModule, 
     BrowserAnimationsModule,
     CarouselModule,
     GalleryModule,
+    
     AppRoutingModule,  
+    
   ],
   providers: [
     {

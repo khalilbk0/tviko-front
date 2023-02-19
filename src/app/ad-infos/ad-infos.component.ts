@@ -3,7 +3,7 @@ import { Component, ViewChild } from '@angular/core';
 import axios from 'axios' ; 
 import { Router, ActivatedRoute, ParamMap, Route } from '@angular/router';
 import { AdDetails } from '../ad-details'; 
-import { GalleryItem, ImageItem } from 'ng-gallery';
+import { Gallery, GalleryItem, ImageItem } from 'ng-gallery';
 import { ElementRef } from '@angular/core';
 import { Lightbox } from 'ng-gallery/lightbox'; 
 import { Renderer2 } from '@angular/core';
@@ -16,6 +16,7 @@ import { Renderer2 } from '@angular/core';
   
 })
 export class AdInfosComponent {  
+  @ViewChild('target') elementRef!: ElementRef ;
   slidesStore : any[] = [] ;
   galleryId = 'myLightbox'
   arrayPreview!: string[];
@@ -71,9 +72,14 @@ closeModal(){
   imagePreview !: string ;
   isOpened = false ; 
   ad :any ;
-  constructor(private route: ActivatedRoute, private elementRef: ElementRef, private renderer: Renderer2) { 
-
-
+  index : number | undefined ;
+  itemClicked(o:any){ 
+   let index = this.elementRef.nativeElement.querySelector('gallery-item').getAttribute('ng-reflect-curr-index') 
+   this.preview(this.slidesStore[index].data.src)
+  }
+  
+  constructor(private route: ActivatedRoute, private gallery : Gallery , private renderer: Renderer2) { 
+    
     this.route.queryParams
     .subscribe(params => { 
       this.id = params['id'];

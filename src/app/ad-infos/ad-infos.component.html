@@ -25,8 +25,8 @@
                 </div>
             </div>
         </div>
-      <div class="gallery "  > 
-        <gallery   class="background-color:transparent"   [items]="slidesStore" ></gallery>
+      <div class="gallery "  #target > 
+        <gallery    (itemClick)="itemClicked('ok')" class="background-color:transparent"   [items]="slidesStore" ></gallery>
      
       </div>
       <div class="onlyMobile">
@@ -35,7 +35,7 @@
   
           <div class="address">{{ad.adress}}</div>
   
-          <div class="socials">
+          <div class="socials" >
             <a href="https://www.instagram.com/tvikotrebinje/">
               <img src="../../assets/instagram (1).png" alt="instagram" />
             </a>
