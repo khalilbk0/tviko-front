@@ -181,7 +181,7 @@ main{
   }
   
   .description {
-    width: 200%; 
+    grid-area: des;
     margin: 20px;
   }
   
@@ -421,7 +421,6 @@ main{
     .description{
       grid-area: unset;
       margin-top: 5%;
-      width: 100%;
     }
     .number-of-rooms {
       font-size: 13px;
@@ -653,7 +652,7 @@ main{
     background-color: grey!important;
   }
   .gallery{
-    width: 90%;
+    width: 80%;
   }
   .gallery-item, .gallery-image, .gallery-thumb .gallery-image{
     transition: 100m;
