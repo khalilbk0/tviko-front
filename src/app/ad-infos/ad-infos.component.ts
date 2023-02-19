@@ -22,8 +22,6 @@ export class AdInfosComponent {
   arrayPreview!: string[];
    
 public preview(src:string){ 
-  this.imagePreview = src
-  this.isOpened = true
 }
  
 isDescriptionLong(){
@@ -75,7 +73,8 @@ closeModal(){
   index : number | undefined ;
   itemClicked(o:any){ 
    let index = this.elementRef.nativeElement.querySelector('gallery-item').getAttribute('ng-reflect-curr-index') 
-   this.preview(this.slidesStore[parseInt(index)].data.src)
+  this.imagePreview = this.slidesStore[parseInt(index)].data.src
+  this.isOpened = true
   }
   
   constructor(private route: ActivatedRoute, private gallery : Gallery , private renderer: Renderer2) { 
