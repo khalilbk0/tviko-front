@@ -75,7 +75,7 @@ closeModal(){
   index : number | undefined ;
   itemClicked(o:any){ 
    let index = this.elementRef.nativeElement.querySelector('gallery-item').getAttribute('ng-reflect-curr-index') 
-   this.preview(this.slidesStore[index].data.src)
+   this.preview(this.slidesStore[parseInt(index)].data.src)
   }
   
   constructor(private route: ActivatedRoute, private gallery : Gallery , private renderer: Renderer2) { 
