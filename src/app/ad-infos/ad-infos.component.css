@@ -462,7 +462,7 @@ main{
       grid-template-areas:
         "gallery gallery"
         "info info"
-        "des des";
+        "des  ";
     }
     .ad-info-wrapper {
       display: inline-block;
@@ -472,6 +472,10 @@ main{
       display: flex;
       margin: auto;
       margin-left: 5%;
+    }
+    .description-text{
+      font-size: 16px;
+      width: 100%!important;
     }
     .gallery {
       margin-left: auto;
@@ -660,7 +664,7 @@ main{
     background-color: grey!important;
   }
   .gallery{
-    width: 80%;
+    width: 90%;
   }
   .gallery-item, .gallery-image, .gallery-thumb .gallery-image{
     transition: 100m;
