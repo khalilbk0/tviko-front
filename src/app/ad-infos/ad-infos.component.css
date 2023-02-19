@@ -181,8 +181,12 @@ main{
   }
   
   .description {
-    grid-area: des;
+    grid-area: des; 
     margin: 20px;
+  }
+  .longDescription{
+    grid-area: unset;
+    width: 180%;
   }
   
   .decor {
@@ -422,6 +426,10 @@ main{
       grid-area: unset;
       margin-top: 5%;
     }
+    .longDescription{
+      width: 100%;
+    }
+  
     .number-of-rooms {
       font-size: 13px;
       display: flex;

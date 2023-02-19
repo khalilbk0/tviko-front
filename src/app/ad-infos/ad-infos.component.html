@@ -10,7 +10,7 @@
   <app-divider></app-divider>
   <div class="container" *ngIf="ad !== undefined"> 
     <div class="ad-info-wrapper">
-        <div id="myModal" class="modal" [ngClass]="{' d-inline  text-center' : isOpened }" >
+        <div id="myModal" class="modal"  [ngClass]="{' d-inline  text-center' : isOpened }" >
             <span class="close" (click)="closeModal()" >&times;</span>
           
             <div class="modal-contentd-flex justify-content-center" >
@@ -92,7 +92,7 @@
           </div>
         </div>
       </div>
-      <div class="description">
+      <div class="description" [ngClass]="{'longDescription' : isDescriptionLong() }" >
         <h3 class="des-h">Opis:</h3>
         <p class="description-text"> 
             {{ad.description}}

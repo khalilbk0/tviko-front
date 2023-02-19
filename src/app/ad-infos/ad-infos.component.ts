@@ -25,6 +25,14 @@ public preview(src:string){
   this.isOpened = true
 }
  
+isDescriptionLong(){
+  if(this.ad.description.length > 147){
+    return true
+  }
+  else{
+    return false
+  }
+}
 nextImage(){ 
   const arrayOfPics : any[] = [];
    const el = (this.slidesStore.filter(element => element.src == this.imagePreview))
