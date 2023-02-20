@@ -72,8 +72,8 @@ closeModal(){
   ad :any ;
   index : number | undefined ;
   itemClicked(o:any){ 
-   let index = this.elementRef.nativeElement.querySelector('gallery-item').getAttribute('ng-reflect-curr-index') 
-  console.log(index)
+   let index = this.elementRef.nativeElement.querySelector('.g-active-item gallery-image img').getAttribute("src")
+   this.imagePreview = index
   this.isOpened = true
   }
   
