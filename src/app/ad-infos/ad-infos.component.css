@@ -427,7 +427,7 @@ main{
       margin-top: 5%;
     }
     .longDescription{
-      width: 100%;
+      width: 90%;
     }
   
     .number-of-rooms {
@@ -474,8 +474,8 @@ main{
       margin-left: 5%;
     }
     .description-text{
-      font-size: 16px;
-      width: 100%!important;
+      font-size: 16px; 
+      box-sizing: border-box;
     }
     .gallery {
       margin-left: auto;
@@ -667,5 +667,5 @@ main{
     width: 90%;
   }
   .gallery-item, .gallery-image, .gallery-thumb .gallery-image{
-    transition: 100m;
+    transition: 500ms;
   }
