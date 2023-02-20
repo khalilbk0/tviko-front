@@ -25,7 +25,7 @@
                 </div>
             </div>
         </div>
-      <div class="gallery "  #target > 
+      <div class="gallery " #target > 
         <gallery    (itemClick)="itemClicked('ok')" class="background-color:transparent"   [items]="slidesStore" ></gallery>
      
       </div>
@@ -82,11 +82,11 @@
               </tr>
               <tr>
                 <td class="cell row-lighter">Kupatilo</td>
-                <td class="cell row-lighter">{{ad.structure.Kroom}} m2</td>
+                <td class="cell row-lighter">{{ad.structure.Btroom}} m2</td>
               </tr>
               <tr>
                 <td class="cell row-darker">Ukupno:</td>
-                <td class="cell row-darker">150 m2</td>
+                <td class="cell row-darker">{{totalRooms()}} m2</td>
               </tr>
             </table>
           </div>

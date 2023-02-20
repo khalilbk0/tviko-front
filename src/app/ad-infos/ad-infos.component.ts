@@ -23,7 +23,9 @@ export class AdInfosComponent {
    
 public preview(src:string){ 
 }
- 
+totalRooms(){
+  return parseInt(this.ad.structure.Kroom) + parseInt(this.ad.structure.Btroom) +  parseInt(this.ad.structure.Broom)  +  parseInt(this.ad.structure.lRoom) +  parseInt(this.ad.structure.kitchen) 
+}
 isDescriptionLong(){
   if(this.ad.description.length > 147){
     return true
