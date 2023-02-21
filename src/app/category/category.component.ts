@@ -15,7 +15,7 @@ export class CategoryComponent  {
     else return adress
   }
   @Input()
-  results!: Ad[];
+  results!: any[];
   currentPage = 1;
   resultsPerPage = 12;
   id: string | undefined; 
