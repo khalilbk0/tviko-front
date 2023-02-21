@@ -19,8 +19,8 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { GalleryModule } from 'ng-gallery';
 import { CarouselModule } from '@coreui/angular';
 import { GALLERY_CONFIG } from 'ng-gallery';
-import { GallerizeDirective } from 'ng-gallery/lightbox';
-
+import { GallerizeDirective } from 'ng-gallery/lightbox'; 
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +42,7 @@ import { GallerizeDirective } from 'ng-gallery/lightbox';
     BrowserModule, 
     BrowserAnimationsModule,
     CarouselModule,
+    FormsModule,
     GalleryModule,
     
     AppRoutingModule,  

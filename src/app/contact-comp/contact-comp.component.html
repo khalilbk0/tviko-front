@@ -5,11 +5,13 @@
       <div class="form-info">
         <div class="form">
           <h4 class="info-h">EMAIL FORMA</h4>
-
+        
+	<div class="success" *ngIf="emailSent" ><b>Email sent.</b></div>
           <div class="name-fam">
             <div>
               <h3 class="input-h">Ime</h3>
               <input
+              [(ngModel)]="name" 
                 type="text"
                 placeholder="Unesite ime"
                 class="input name"
@@ -20,6 +22,7 @@
               <h3 class="input-h">Prezime</h3>
               <input
                 type="text"
+                [(ngModel)]="lastName" 
                 placeholder="Unesite Prezime"
                 class="input fam-name"
               />
@@ -28,6 +31,7 @@
 
           <h3 class="input-h">Email</h3>
           <input
+          [(ngModel)]="email" 
             type="email"
             class="input"
             placeholder="Unesite email adresu"
@@ -35,19 +39,22 @@
 
           <h3 class="input-h">Broj Telefona</h3>
           <input
-            type="text"
+          [(ngModel)]="phone" 
+            type="number"
             class="input"
             placeholder="Unesite broj telefona"
           />
 
           <h3 class="input-h">Vaša poruka</h3>
           <input
+
+          [(ngModel)]="text" 
             type="text"
             class="input mess"
             placeholder="Moja želja je..."
           />
 
-          <button type="submit" class="email-submit">POŠALJITE</button>
+          <button type="submit" class="email-submit" (click)="submit()" >POŠALJITE</button>
         </div>
         <div class="info">
           <div class="informations">
