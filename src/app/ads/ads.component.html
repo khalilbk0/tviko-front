@@ -4,7 +4,7 @@
 
     <div class="ad-wrapper nek-u-tr">
       <div *ngFor="let ad of Category1" class="ad u-tr">
-        <a href="/adInfo?id={{ad.id}}" style="text-decoration: none">
+        <a [routerLink]="['/adInfo']" [queryParams]="{id: ad.id}" style="text-decoration: none">
           <img
             [src]="ad.mainImage"
             alt="ad-photo"
@@ -15,7 +15,7 @@
       </div>
  
     </div>
-    <a href="/category?id=1"  class="action-btn text-decoration-none"  >
+    <a [routerLink]="['/category']" [queryParams]="{id: 1}" class="action-btn text-decoration-none"  >
       POGLEDAJTE SVE NEKRETNINE
       <img src="../../assets//right-arrow (1) 1.png" alt="arrow" />
     </a>
@@ -29,7 +29,7 @@
          
 
         <div class="ad u-tr" *ngFor="let ad2 of Category2">
-          <a href="/adInfo?id={{ad2.id}}" style="text-decoration: none">
+          <a [routerLink]="['/adInfo']" [queryParams]="{id: ad2.id}" style="text-decoration: none">
             <img
               src="{{ad2.mainImage}}"
               alt="ad-photo"
@@ -40,7 +40,7 @@
         </div>
       </div>
 
-      <a href="/category?id=2"  class="action-btn text-decoration-none"  >
+      <a [routerLink]="['/category']" [queryParams]="{id: 2}"  class="action-btn text-decoration-none"  >
         POGLEDAJTE SVE NEKRETNINE
         <img src="../../assets//right-arrow (1) 1.png" alt="arrow" />
       </a>
@@ -65,7 +65,7 @@
          
 
         <div class="ad u-tr" *ngFor="let ad3 of Category3">
-          <a href="/adInfo?id={{ad3.id}}" style="text-decoration: none">
+          <a [routerLink]="['/adInfo']" [queryParams]="{id: ad3.id}" style="text-decoration: none">
             <img
               src="{{ad3.mainImage}}"
               alt="ad-photo"
@@ -77,7 +77,7 @@
         </div>
       </div>
 
-      <a a href="/category?id=3"   class="action-btn text-decoration-none">
+      <a [routerLink]="['/category']" [queryParams]="{id:3}"  class="action-btn text-decoration-none">
         POGLEDAJTE SVE NEKRETNINE
         <img src="../../assets//right-arrow (1) 1.png" alt="arrow" />
       </a>

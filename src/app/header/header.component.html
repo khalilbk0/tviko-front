@@ -6,10 +6,10 @@
           </a>
         </div>
         <div class="nav-links">
-          <a href="/" class="nav-link">POČETNA</a>
-          <a href="/About-Us" class="nav-link">O NAMA</a>
-          <a href="/contact" class="nav-link">KONTAKT</a>
-          <a href="/category?id=1" class="nav-link  last-link">NEKRETNINE</a>
+          <a [routerLink]="['/']" class="nav-link">POČETNA</a>
+          <a [routerLink]="['/About-Us']" class="nav-link">O NAMA</a>
+          <a [routerLink]="['/contact']" class="nav-link">KONTAKT</a>
+          <a [routerLink]="['/category']" [queryParams]="{id: 1}" class="nav-link  last-link">NEKRETNINE</a>
         </div>
         <div class="nav-socials">
          <a href="https://www.facebook.com/tvikotrebinje/">
@@ -29,10 +29,10 @@
       </div>
       <div class="responsive-menu none"  [ngClass]="{'none': !isMenuOpen}" >
         <a class="res-link close" (click)="toggleResponsiveMenu()">X</a>
-        <a href="/" class="res-link">POČETNA</a>
-        <a href="/About-Us" class="res-link">O NAMA</a>
-        <a href="/contact" class="res-link">KONTAKT</a>
-        <a href="/category?id=1" class="res-link last-link">NEKRETNINE</a>
+        <a [routerLink]="['/']"  class="res-link">POČETNA</a>
+        <a [routerLink]="['/About-Us']" class="res-link">O NAMA</a>
+        <a [routerLink]="['/contact']"  class="res-link">KONTAKT</a>
+        <a [routerLink]="['/category']" [queryParams]="{id: 1}" class="res-link last-link">NEKRETNINE</a>
       </div>
       <div class="overlay none"  [ngClass]="{'none': !isMenuOpen}" (click)="toggleResponsiveMenu()"></div>
     </nav>

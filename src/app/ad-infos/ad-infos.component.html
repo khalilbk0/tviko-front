@@ -132,7 +132,7 @@
       
     </div>
 
-    <a  href="/contact" class="action-btn text-decoration-none"  style="margin-top: 70px
+    <a  [routerLink]="['/contact']" class="action-btn text-decoration-none"  style="margin-top: 70px
     ">
       JAVITE NAM SE PUTEM EMAILA <img src="../../assets/arrow.png" alt="arrow" />
   </a>
@@ -145,7 +145,7 @@
     <div class="container">
 
       <h2 class="look-all-heading">POGLEDAJTE SVE NEKRETNINE</h2>
-      <a  href="/category?id=1" class="action-btn text-decoration-none">
+      <a [routerLink]="['/category']" [queryParams]="{id: 1}"  class="action-btn text-decoration-none">
         POGLEDAJTE SVE <img src="../../assets/arrow.png" alt="arrow" />
       </a>
     </div>

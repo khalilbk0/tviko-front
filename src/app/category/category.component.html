@@ -8,9 +8,9 @@
     <h2 class="section-h">KATEGORIJE</h2>
 
     <div class="category-btns">
-      <a class="category-btn text-decoration-none" href="/category?id=1" [ngClass]="{'active': catOneSelected}">NEKRETNINE U TREBINJU</a>
-      <a class="category-btn text-decoration-none" href="/category?id=2" [ngClass]="{'active': catTwoSelected}" >NEKRETNINE IZVAN TREBINJA</a>
-      <a class="category-btn text-decoration-none" href="/category?id=3" [ngClass]="{'active': catThreeSelecteD}">NEKRETNINE U IZGRADNJI</a>
+      <a class="category-btn text-decoration-none" [routerLink]="['/category']" [queryParams]="{id: 1}" [ngClass]="{'active': catOneSelected}">NEKRETNINE U TREBINJU</a>
+      <a class="category-btn text-decoration-none" [routerLink]="['/category']" [queryParams]="{id: 2}" [ngClass]="{'active': catTwoSelected}" >NEKRETNINE IZVAN TREBINJA</a>
+      <a class="category-btn text-decoration-none" [routerLink]="['/category']" [queryParams]="{id: 3}" [ngClass]="{'active': catThreeSelecteD}">NEKRETNINE U IZGRADNJI</a>
     </div>
   </div>
 
@@ -24,7 +24,7 @@
 
       <div class="ad-wrapper nek-u-tr">
         <div *ngFor="let result of results | slice:startIndex:endIndex" class="ad u-tr">
-          <a href="/adInfo?id={{result.id}}" style="text-decoration: none">
+          <a [routerLink]="['/adInfo']" [queryParams]="{id: result.id}" style="text-decoration: none">
             <img
               [src]="result.mainImage"
               alt="ad-photo"
