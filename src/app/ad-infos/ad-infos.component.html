@@ -9,7 +9,12 @@
   </main>
   <app-divider></app-divider>
   <div class="container" *ngIf="ad !== undefined"> 
+    <div class="row text-center m-4">
+      
+      <h1> {{ad.title}} </h1> 
+    </div>
     <div class="ad-info-wrapper">
+  
         <div id="myModal" class="modal"  [ngClass]="{' d-inline  text-center' : isOpened }" >
             <span class="close" (click)="closeModal()" >&times;</span>
           
