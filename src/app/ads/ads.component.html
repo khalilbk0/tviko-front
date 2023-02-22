@@ -9,6 +9,7 @@
             [src]="ad.mainImage"
             alt="ad-photo"
           />
+          <div class=" ad-adress text-nowrap">{{shortAdress(ad.title)}}</div>
           <div class="square-feet-num">{{ad.squarefeet}} m2</div>
           <div class=" ad-adress text-nowrap">{{shortAdress(ad.adress)}}</div>
         </a>
@@ -34,8 +35,10 @@
               src="{{ad2.mainImage}}"
               alt="ad-photo"
             />
+
+            <div class=" ad-adress text-nowrap">{{shortAdress(ad2.title)}}</div>
             <div class="square-feet-num">{{ad2.squarefeet}} m2</div>
-            <div class=" ad-adress text-nowrap">{{ad2.adress}}</div>
+            <div class=" ad-adress text-nowrap">{{shortAdress(ad2.adress)}}</div>
           </a>
         </div>
       </div>
@@ -71,8 +74,10 @@
               alt="ad-photo"
               
             />
+            <div class=" ad-adress text-nowrap">{{shortAdress(ad3.title)}}</div>
             <div class="square-feet-num">{{ad3.squarefeet}} m2</div>
-            <div class=" ad-adress text-nowrap text-nowrap">{{ad3.adress}}</div>
+           
+            <div class=" ad-adress text-nowrap">{{shortAdress(ad3.adress)}}</div>
           </a>
         </div>
       </div>
