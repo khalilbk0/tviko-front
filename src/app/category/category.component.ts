@@ -23,6 +23,13 @@ export class CategoryComponent  {
   catOneSelected = false ;
   catTwoSelected = false; 
   catThreeSelecteD = false ; 
+   API_KEY = "Tviko1998Trebinje"
+   instance = axios.create({
+     
+    headers: {
+      'Authorization': `Bearer ${this.API_KEY}`
+    }
+  });
   ads : any | undefined ; 
   get startIndex() {
     return (this.currentPage - 1) * this.resultsPerPage;
@@ -31,11 +38,17 @@ export class CategoryComponent  {
   get endIndex() {
     return this.startIndex + this.resultsPerPage;
   }
+  
   previousPage() {
     if (this.currentPage > 1) {
       this.currentPage--;
     }
     
+  }
+  catById(id:string){
+    this.instance.get('https://backoffice.tvikonekretnine.com/listByCategory.php?id='+id).then((res) => {
+      this.results = res.data 
+    })  
   }
   scrollToTop() {
      {
@@ -59,10 +72,20 @@ export class CategoryComponent  {
     if(this.id=="1"){
       this.titleCategory = 'nice'
       this.catOneSelected = true ; 
+      this.catTwoSelected = false ; 
+      this.catThreeSelecteD = false ; 
+      this.catById("1")
     }if(this.id =="2"){
-      this.catTwoSelected = true  ;
+     
+      this.catOneSelected = false ; 
+      this.catTwoSelected = true ; 
+      this.catThreeSelecteD = false ; 
+      this.catById("2")
     }if(this.id=="3"){
       this.catThreeSelecteD = true ; 
+      this.catById("3")
+      this.catOneSelected = false ; 
+      this.catTwoSelected = false ;  
     }
     
   }
@@ -81,32 +104,8 @@ export class CategoryComponent  {
         
       }
     ); 
-    axios.get('https://backoffice.tvikonekretnine.com/tvikoBackEnd/listByCategory.php?id='+this.id).then((res) => {
-      this.results = res.data
-      console.log(res.data)
-    })
-    this.results = [{
-      "id": 0,
-      "squarefeet": "60",
-      "adress": "Republike Srpske 1",
-      "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
-    }, {
-      "id": 0,
-      "squarefeet": "60",
-      "adress": "Republike Srpske 1",
-      "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
-    } , {
-      "id": 0,
-      "squarefeet": "60",
-      "adress": "Republike Srpske 1",
-      "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
-    } , 
-    {
-      "id": 0,
-      "squarefeet": "60",
-      "adress": "Republike Srpske 1",
-      "mainImage": "https://images.familyhomeplans.com/cdn-cgi/image/fit=scale-down,quality=85/plans/41438/41438-b580.jpg"
-    }]
+  
+   
     
   } 
 }
