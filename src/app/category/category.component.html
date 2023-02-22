@@ -10,7 +10,12 @@
     <div class="category-btns">
       <a class="category-btn text-decoration-none" [routerLink]="['/category']" [queryParams]="{id: 1}" [ngClass]="{'active': catOneSelected}">NEKRETNINE U TREBINJU</a>
       <a class="category-btn text-decoration-none" [routerLink]="['/category']" [queryParams]="{id: 2}" [ngClass]="{'active': catTwoSelected}" >NEKRETNINE IZVAN TREBINJA</a>
-      <a class="category-btn text-decoration-none" [routerLink]="['/category']" [queryParams]="{id: 3}" [ngClass]="{'active': catThreeSelecteD}">NEKRETNINE U IZGRADNJI</a>
+      <div *ngIf="!catThreeEmpty" >
+        <a class="category-btn text-decoration-none" [routerLink]="['/category']" [queryParams]="{id: 3}" [ngClass]="{'active': catThreeSelecteD}"  >NEKRETNINE U IZGRADNJI</a>
+      </div>
+      <div *ngIf="catThreeEmpty" >
+        <a class="category-btn text-decoration-none disabled"   [ngClass]="{'active': catThreeSelecteD}"  >USKORO...</a>
+      </div>
     </div>
   </div>
 
@@ -40,9 +45,7 @@
         </div>
 
      <div class="row">
-      <div class="col"  *ngFor="let result of results | slice:startIndex:endIndex">
-      
-      </div>
+     
      </div>
       <div class="container">
         <div class="next-prev">

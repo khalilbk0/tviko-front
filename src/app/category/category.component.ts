@@ -16,6 +16,7 @@ export class CategoryComponent  {
   }
   @Input()
   results!: any[];
+  catThreeEmpty: boolean | undefined ;
   currentPage = 1;
   resultsPerPage = 12;
   id: string | undefined; 
@@ -47,7 +48,7 @@ export class CategoryComponent  {
   }
   catById(id:string){
     this.instance.get('https://backoffice.tvikonekretnine.com/listByCategory.php?id='+id).then((res) => {
-      this.results = res.data 
+      this.results = res.data
     })  
   }
   scrollToTop() {
@@ -67,7 +68,7 @@ export class CategoryComponent  {
   get totalPages() {
     return Math.ceil(this.results.length / this.resultsPerPage);
   }
-
+  
   changetitle(){
     if(this.id=="1"){
       this.titleCategory = 'nice'
@@ -105,7 +106,16 @@ export class CategoryComponent  {
       }
     ); 
   
-   
     
+      let data ; 
+      this.instance.get('https://backoffice.tvikonekretnine.com/listByCategory.php?id=3').then((res) => {
+        if(res.data){
+          this.catThreeEmpty = true ; 
+        }else{
+          this.catThreeEmpty = false ; 
+        }
+
+      })
+     
   } 
 }
