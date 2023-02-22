@@ -207,8 +207,8 @@
     color: #000;
     font-size: 17px;
 
-    padding: 0px 5px;
-    margin: 15px 0px 15px 10px;
+    padding: 0px 5px; 
+    margin: auto;
   }
 
   .ad-adress {
@@ -241,8 +241,7 @@
     color: #000;
     font-size: 15px;
 
-    padding: 0px 5px;
-    margin: 15px 0px 15px 10px;
+    padding: 0px 5px; 
   }
 
   .ad-adress {
@@ -268,8 +267,7 @@
     color: #000;
     font-size: 12px;
 
-    padding: 0px 5px;
-    margin: 15px 0px 15px 10px;
+    padding: 0px 5px; 
   }
 
   .ad-adress {
@@ -291,8 +289,7 @@
     color: #000;
     font-size: 14px;
 
-    padding: 0px 5px;
-    margin: 15px 0px 15px 10px;
+    padding: 0px 5px; 
   }
 
   .ad-adress {
