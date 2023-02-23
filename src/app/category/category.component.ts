@@ -18,7 +18,7 @@ export class CategoryComponent  {
   results!: any[];
   catThreeEmpty: boolean | undefined ;
   currentPage = 1;
-  resultsPerPage = 12;
+  resultsPerPage = 8;
   id: string | undefined; 
   titleCategory : string | undefined ;
   catOneSelected = false ;
@@ -109,10 +109,10 @@ export class CategoryComponent  {
     
       let data ; 
       this.instance.get('https://backoffice.tvikonekretnine.com/listByCategory.php?id=3').then((res) => {
-        if(res.data){
-          this.catThreeEmpty = true ; 
-        }else{
+        if(res.data.length){
           this.catThreeEmpty = false ; 
+        }else{
+          this.catThreeEmpty = true ; 
         }
 
       })

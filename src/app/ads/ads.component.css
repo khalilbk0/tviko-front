@@ -39,10 +39,11 @@
 .ad {
   max-width: 250px;
   border: 2px solid #e3e3e3;
-  overflow: hidden;
+  overflow: visible;
   font-family: "Playfair Display", serif;
   margin: 20px 10px;
   background-color: #fff;
+  max-height: 400px;
 }
 
 .ad:hover {

@@ -42,6 +42,8 @@
     font-family: "Playfair Display", serif;
     margin: 20px 10px;
     background-color: #fff;
+    
+    max-height: 400px;
   }
   
   .ad:hover {
@@ -240,7 +242,6 @@
   @media only screen and (max-width: 563px) {
     .ad {
       max-width: 200px;
-  
       margin: 10px 5px;
     }
   
