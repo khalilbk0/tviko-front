@@ -134,7 +134,7 @@ closeModal(){
         this.ad = res.data[0]
         var slides = new ImageItem({src:res.data[0].mainImage , thumb:res.data[0].otherImages})
         res.data[0].otherImages ; 
-        this.slidesStore?.push(slides)  
+        this.images = res.data[0].otherImages
         for (let i = 0; i < res.data[0].otherImages.length; i++) {
         
            var el = new ImageItem({src:res.data[0].otherImages[i] , thumb:res.data[0].otherImages[i]})
