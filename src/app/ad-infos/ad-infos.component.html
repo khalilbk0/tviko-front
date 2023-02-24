@@ -91,13 +91,25 @@
     
   
   </div>
+  
   <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="carrousel">
-          
-        </div>
-      </div>
+ 
+    <div class="row"> 
+      
+     
+          <owl-carousel-o [options]="customOptions" class="CostumCarousel px-3" >
+    
+            <ng-container *ngFor="let slide of images">
+              <ng-template carouselSlide class="item" >
+                <img [src]="slide"  >
+              </ng-template>
+            </ng-container>
+        
+          </owl-carousel-o>
+       
+   
+    
+       
       <div class="col">
         <div class="squarefeet m-0 text-nowrap" #myButton id="myButton">{{ad.squarefeet}} m2</div>
         <div class="address ">{{ad.adress}}</div>
@@ -120,12 +132,7 @@
         <h2 class="number-of-rooms my-2">{{ad.rooms}}</h2>
         
         <div class="floor">stage</div>
-        <div class="description" [ngClass]="{'longDescription' : isDescriptionLong() }" >
-          <h3 class="des-h">Opis:</h3>
-          <p class="description-text"> 
-              {{ad.description}}
-          </p>
-        </div>
+      
       </div>
       <div class="col">
 
@@ -166,6 +173,9 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="row">
+    
   </div>
   <div class="look-all">
     <div class="container">

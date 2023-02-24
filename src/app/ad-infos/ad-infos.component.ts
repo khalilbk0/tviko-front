@@ -1,12 +1,12 @@
 import { Ad } from './../ad';
 import { Component, ViewChild } from '@angular/core';
 import axios from 'axios' ; 
-import { Router, ActivatedRoute, ParamMap, Route } from '@angular/router';
-import { AdDetails } from '../ad-details'; 
+import { Router, ActivatedRoute, ParamMap, Route } from '@angular/router'; 
 import { Gallery, GalleryItem, ImageItem } from 'ng-gallery';
-import { ElementRef } from '@angular/core';
-import { Lightbox } from 'ng-gallery/lightbox'; 
+import { ElementRef } from '@angular/core'; 
 import { Renderer2 } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @Component({
   
@@ -20,8 +20,34 @@ export class AdInfosComponent {
   slidesStore : any[] = [] ;
   galleryId = 'myLightbox'
   arrayPreview!: string[];
+  images = ["https://via.placeholder.com/600/771796","https://via.placeholder.com/600/771796","https://via.placeholder.com/600/771796","https://via.placeholder.com/600/771796","https://via.placeholder.com/600/771796"];
    
 public preview(src:string){ 
+}
+customOptions: OwlOptions = {
+  loop: true,  
+  items:1,
+  mouseDrag: true,
+  touchDrag: true,
+  pullDrag: true,
+  dots: true,
+  navSpeed: 600,
+  navText: ['&#8249', '&#8250;'],
+  responsive: {
+    0: {
+      items: 1 
+    },
+    400: {
+      items: 1
+    },
+    760: {
+      items: 1
+    },
+    1000: {
+      items: 1
+    }
+  } , 
+  slideBy:1
 }
 totalRooms(){
   return parseInt(this.ad.structure.Kroom) + parseInt(this.ad.structure.Btroom) +  parseInt(this.ad.structure.Broom)  +  parseInt(this.ad.structure.lRoom) +  parseInt(this.ad.structure.kitchen) 
@@ -108,7 +134,7 @@ closeModal(){
         this.ad = res.data[0]
         var slides = new ImageItem({src:res.data[0].mainImage , thumb:res.data[0].otherImages})
         res.data[0].otherImages ; 
-        this.slidesStore?.push(slides) 
+        this.slidesStore?.push(slides)  
         for (let i = 0; i < res.data[0].otherImages.length; i++) {
         
            var el = new ImageItem({src:res.data[0].otherImages[i] , thumb:res.data[0].otherImages[i]})

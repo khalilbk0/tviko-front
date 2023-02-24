@@ -101,6 +101,9 @@ main{
  
 
   @media only screen and (max-width: 700px){
+    .CostumCarousel{
+      width: 100%;
+    }
     .modal-content {
       width: 100%;
     }
@@ -113,11 +116,12 @@ main{
     display: block;
     overflow: hidden;  
   }
-  
+  .CostumCarousel{
+    width: 50%;
+  }
   .carousel-item { 
     display: grid;
-    grid-area: gallery;
-    height: 400px;
+    grid-area: gallery; 
     width: 100%;
     position: relative;
     top: 0;
@@ -232,9 +236,7 @@ main{
     letter-spacing: 1px;
     border: 2px solid #cb8b53;
     text-align: center;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 90%; 
   }
   
   .floor {
@@ -430,8 +432,7 @@ main{
     .number-of-rooms {
       font-size: 13px;
       display: flex;
-      justify-content: center;
-      max-width: 50%;
+      justify-content: center; 
       word-wrap: break-word;
       flex-wrap: wrap;
     }

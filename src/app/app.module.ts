@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { OwlModule } from 'ngx-owl-carousel';
+import { BrowserModule } from '@angular/platform-browser'; 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,9 +17,9 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactPageComponent } from './contact-page/contact-page.component'; 
 import { GalleryModule } from 'ng-gallery';
-import { CarouselModule } from '@coreui/angular';
+import {  SharedModule } from '@coreui/angular';
 import { GALLERY_CONFIG } from 'ng-gallery';
-import { GallerizeDirective } from 'ng-gallery/lightbox'; 
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
@@ -42,11 +42,9 @@ import { FormsModule } from '@angular/forms';
     BrowserModule, 
     BrowserAnimationsModule,
     CarouselModule,
-    FormsModule,
+    FormsModule, 
     GalleryModule,
-    
-    AppRoutingModule,  
-    
+    AppRoutingModule,   
   ],
   providers: [
     {
