@@ -35,7 +35,7 @@
      
       </div>
       <div class="onlyMobile">
-        <div class="info">
+        <div class="info text-center">
           <div class="squarefeet" #myButton id="myButton">{{ad.squarefeet}} m2</div>
   
           <div class="address">{{ad.adress}}</div>
@@ -112,8 +112,8 @@
    
     
        
-      <div class="col">
-        <div class="squarefeet m-0 text-nowrap" #myButton id="myButton">{{ad.squarefeet}} m2</div>
+      <div class="col mx-auto text-center my-2">
+        <div class="squarefeet   text-nowrap" #myButton id="myButton">{{ad.squarefeet}} m2</div>
         <div class="address ">{{ad.adress}}</div>
         <div class="socials m-0 d-inline" >
           <a href="https://www.instagram.com/tvikotrebinje/">
@@ -131,14 +131,19 @@
           </a>
         </div>
         
-        <h2 class="number-of-rooms my-2">{{ad.rooms}}</h2>
+        <h2 class="number-of-rooms my-2 mx-auto text-center">{{ad.rooms}}</h2>
         
         <div class="floor">{{ad.floor}}</div>
-      
+        <div class="description">
+          <h3 class="des-h">Opis:</h3>
+          <p class="description-text">
+            {{ad.description}}
+          </p>
+        </div>
       </div>
-      <div class="col">
+      <div class="col col-12-sm"  *ngIf="ad.structure" >
 
-        <div class=" " *ngIf="ad.structure" >
+        <div  >
           <h3 class="str-h">Struktura soba</h3>
           <div class="table">
             <table>
@@ -176,9 +181,7 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    
-  </div>
+  
   <div class="look-all">
     <div class="container">
 

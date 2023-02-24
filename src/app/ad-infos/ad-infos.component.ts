@@ -132,14 +132,12 @@ closeModal(){
     }else{
       instance.get('https://backoffice.tvikonekretnine.com/Ad.php?id='+this.id).then((res) => {
         this.ad = res.data[0]
-        var slides = new ImageItem({src:res.data[0].mainImage , thumb:res.data[0].otherImages})
-        res.data[0].otherImages ; 
-        this.images = res.data[0].otherImages
+        this.images = Array(res.data[0].mainImage)
         for (let i = 0; i < res.data[0].otherImages.length; i++) {
-        
-           var el = new ImageItem({src:res.data[0].otherImages[i] , thumb:res.data[0].otherImages[i]})
-          this.slidesStore.push(el)
+           this.images.push(res.data[0].otherImages[i])
+          
         }
+      
         
       })
     }
