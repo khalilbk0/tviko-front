@@ -33,6 +33,8 @@ customOptions: OwlOptions = {
   pullDrag: true,
   dots: true,
   
+  nav:true,
+  navText: ["&#x27;next&#x27;","&#x27;prev&#x27;"]  ,
   navSpeed: 600, 
   responsive: {
     0: {
