@@ -496,8 +496,7 @@ main{
      
   
     .number-of-rooms {
-      font-size: 1.5vw;
-      max-width: 250px;
+      font-size: 1.5vw; 
       display: flex; 
       flex-wrap: wrap;
     }
