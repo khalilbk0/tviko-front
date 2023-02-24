@@ -65,7 +65,7 @@
           </a>
         </div>
         
-        <h2 class="number-of-rooms my-2 mx-auto text-center"  *ngIf="ad.rooms" >{{ad.rooms}}</h2>
+        <h2 class="number-of-rooms my-2 mt-5 mx-auto text-center"  *ngIf="ad.rooms" >{{ad.rooms}}</h2>
         
         <div class="floor">{{ad.floor}}</div>
   
@@ -82,27 +82,27 @@
               </tr>
               <tr>
                 <td class="cell row-lighter">Kuhinja</td>
-                <td class="cell row-lighter">{{ad.structure.kitchen}} m2</td>
+                <td class="cell row-lighter sansSerif">{{ad.structure.kitchen}} m2</td>
               </tr>
               <tr>
                 <td class="cell row-darker">Dnevna soba</td>
-                <td class="cell row-darker">{{ad.structure.lRoom}} m2</td>
+                <td class="cell row-darker sansSerif">{{ad.structure.lRoom}} m2</td>
               </tr>
               <tr>
                 <td class="cell row-lighter">Spavaca soba</td>
-                <td class="cell row-lighter">{{ad.structure.Broom}} m2</td>
+                <td class="cell row-lighter sansSerif">{{ad.structure.Broom}} m2</td>
               </tr>
               <tr>
                 <td class="cell row-darker">Djecija soba</td>
-                <td class="cell row-darker">{{ad.structure.Kroom}} m2</td>
+                <td class="cell row-darker sansSerif">{{ad.structure.Kroom}} m2</td>
               </tr>
               <tr>
                 <td class="cell row-lighter">Kupatilo</td>
-                <td class="cell row-lighter">{{ad.structure.Btroom}} m2</td>
+                <td class="cell row-lighter sansSerif">{{ad.structure.Btroom}} m2</td>
               </tr>
               <tr>
                 <td class="cell row-darker">Ukupno:</td>
-                <td class="cell row-darker">{{totalRooms()}} m2</td>
+                <td class="cell row-darker sansSerif">{{totalRooms()}} m2</td>
               </tr>
             </table>
           </div>
@@ -120,7 +120,40 @@
       </div>
     </div>
   </div>
+   <div class="row ">
+    <div class="contact-infos-wrapper mx-auto w-75">
+       
+      <div>
+        <h4 class="info-h">KONTAKT TELEFON</h4>
+        <p class="info-text">+387 (0)65 379 162</p> 
+      </div>
+
+      <div>
+        <h4 class="info-h">DRUŠTVENE MREŽE</h4>
+        <div class="socials mx-auto d-inline" >
+          <a href="https://www.instagram.com/tvikotrebinje/">
+            <img src="../../assets/instagram (1).png" alt="instagram"  />
+          </a>
+
+          <a
+            href="https://www.facebook.com/tvikotrebinje/photos/?ref=page_internal&mt_nav=0&paipv=0&eav=AfZLNIf9x94UD5uqNEiYSArTScYKOxUpmZoqUf3FEkuBVFH_n-jHUZiD-6X6NnzUvCg&_rdr"
+          >
+            <img src="../../assets/facebook.png" alt="facebook" />
+          </a>
+
+          <a href="#" class="wa"  href="https://api.whatsapp.com/send/?phone=38765379162&text&type=phone_number&app_absent=0">
+            <img src="../../assets/whatsap.png"  height="32px" alt="whatsapp" />
+          </a>
+        </div>
+          </div>
+
+      <div>
+        <h4 class="info-h">KONTAKT TELEFON</h4>
+        <p class="info-text">Radnim danima: 07:00 - 17:00</p> 
+      </div>
   
+</div>
+   </div>
   <div class="look-all">
     <div class="container">
 
@@ -134,7 +167,6 @@
     <img src="../../assets/left-back.png" alt="back-img2" class="left-back">
   </div>
  
-  <div class="container-fluid mt-5">
-
+ 
   <app-footer></app-footer>
-  </div>
+ 
