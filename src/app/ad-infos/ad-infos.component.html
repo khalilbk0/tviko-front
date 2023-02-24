@@ -93,19 +93,21 @@
   </div>
   
   <div class="container">
- 
+  
     <div class="row"> 
       
-     
-          <owl-carousel-o [options]="customOptions" class="CostumCarousel px-3" >
-    
-            <ng-container *ngFor="let slide of images">
-              <ng-template carouselSlide class="item" >
-                <img [src]="slide"  >
-              </ng-template>
-            </ng-container>
+      <div class="CostumCarousel">
+        <owl-carousel-o [options]="customOptions" >
+      
+          <ng-container *ngFor="let slide of images">
+            <ng-template carouselSlide class="item" >
+              <img [src]="slide"  >
+            </ng-template>
+          </ng-container>
+      
+        </owl-carousel-o>
+      </div>
         
-          </owl-carousel-o>
        
    
     
@@ -131,12 +133,12 @@
         
         <h2 class="number-of-rooms my-2">{{ad.rooms}}</h2>
         
-        <div class="floor">stage</div>
+        <div class="floor">{{ad.floor}}</div>
       
       </div>
       <div class="col">
 
-        <div class="room-structure" *ngIf="ad.structure" >
+        <div class=" " *ngIf="ad.structure" >
           <h3 class="str-h">Struktura soba</h3>
           <div class="table">
             <table>

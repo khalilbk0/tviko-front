@@ -4,11 +4,12 @@ main{
  
 }
  
- 
- dis
- 
+.CostumCarousel{
+  width: 50%!important;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
-  
 .imgSlide{   
   height: 100px; 
   display: block!important;
@@ -95,30 +96,21 @@ main{
     text-decoration: none;
     cursor: pointer;
   }
-
+ 
   
   /* 100% Image Width on Smaller Screens */
  
-
+ 
   @media only screen and (max-width: 700px){
-    .CostumCarousel{
-      width: 100%;
-    }
+   
     .modal-content {
       width: 100%;
     }
     
   }
 
-  .carousel {
-    height: 400px;
-    width: 50vh; 
-    display: block;
-    overflow: hidden;  
-  }
-  .CostumCarousel{
-    width: 50%;
-  }
+ 
+ 
   .carousel-item { 
     display: grid;
     grid-area: gallery; 
@@ -144,9 +136,7 @@ main{
      
   }
 
-  *{
-    margin: 0;
-    padding: 0;
+  *{ 
     box-sizing: border-box;
     font-family: "Playfair Display", serif;
   }
@@ -399,6 +389,12 @@ main{
   }
   
   @media only screen and (max-width: 1200px) {
+     
+.CostumCarousel{
+  width: 50%!important;
+  margin-left: 20px;
+  margin-right: 20px;
+}
     .left-back {
       height: 200px;
       width: 250px;
@@ -415,6 +411,11 @@ main{
   }
   
   @media only screen and (max-width: 1100px) {
+    .CostumCarousel{
+      width:70%!important;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
     .ad-info-wrapper {
       grid-template-areas:
         "gallery info"
@@ -449,13 +450,18 @@ main{
     .contact-infos-wrapper {
       justify-content: center;
     }
-  
+   
+
     .contact-infos-wrapper div {
       margin: 25px;
     }
   }
   
   @media only screen and (max-width: 900px) {
+    .CostumCarousel{
+      width:70%!important;
+      margin: auto;
+    }
     .ad-info-wrapper {
       grid-template-areas:
         "gallery gallery"
@@ -492,8 +498,7 @@ main{
     .number-of-rooms {
       font-size: 1.5vw;
       max-width: 250px;
-      display: flex;
-      justify-content: center;
+      display: flex; 
       flex-wrap: wrap;
     }
   }
@@ -588,6 +593,7 @@ main{
   
     table {
       border-spacing: 7px;
+      margin: auto!important;
     }
   }
   
