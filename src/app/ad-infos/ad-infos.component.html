@@ -98,7 +98,7 @@
     <div class="row"> 
       
       <div class="CostumCarousel">
-        <owl-carousel-o [options]="customOptions" >
+        <owl-carousel-o [options]="customOptions"  >
       
           <ng-container *ngFor="let slide of images">
             <ng-template carouselSlide class="item" >
@@ -113,7 +113,7 @@
    
     
        
-      <div class="col mx-auto text-center my-2">
+      <div class="col mx-auto text-center my-2 infosBS">
         <div class="squarefeet   text-nowrap" #myButton id="myButton">{{ad.squarefeet}} m2</div>
         <div class="address ">{{ad.adress}}</div>
         <div class="socials m-0 d-inline" >
@@ -127,8 +127,8 @@
             <img src="../../assets/facebook.png" alt="facebook" />
           </a>
 
-          <a href="#" class="wa">
-            <img src="../../assets/whatsap.png" height="32px" alt="whatsapp" />
+          <a href="#" class="wa"  href="https://api.whatsapp.com/send/?phone=38765379162&text&type=phone_number&app_absent=0">
+            <img src="../../assets/whatsap.png"  height="32px" alt="whatsapp" />
           </a>
         </div>
         
@@ -139,9 +139,9 @@
       </div>
       <div class="col col-12-sm"  *ngIf="ad.structure" >
 
-        <div  >
-          <h3 class="str-h">Struktura soba</h3>
-          <div class="table">
+        <div class="table" >
+          <h3 class="str-h text-center">Struktura soba</h3>
+          <div >
             <table>
               <tr>
                 <th class="cell t-heading">Prostorije</th>

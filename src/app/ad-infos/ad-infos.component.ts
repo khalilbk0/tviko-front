@@ -28,13 +28,12 @@ public preview(src:string){
 }
 customOptions: OwlOptions = {
   loop: true,  
-  items:1,
   mouseDrag: true,
   touchDrag: true,
   pullDrag: true,
   dots: true,
-  navSpeed: 600,
-  navText: ['&#8249', '&#8250;'],
+  
+  navSpeed: 600, 
   responsive: {
     0: {
       items: 1 
@@ -48,7 +47,7 @@ customOptions: OwlOptions = {
     1000: {
       items: 1
     }
-  } , 
+  } ,  
   slideBy:1
 }
 totalRooms(){
@@ -62,33 +61,22 @@ isDescriptionLong(){
     return false
   }
 }
-nextImage(){ 
-  const arrayOfPics : any[] = [];
-   const el = (this.slidesStore.filter(element => element.src == this.imagePreview))
-   this.slidesStore.map(el => {
-    arrayOfPics.push(el.data.src)
-   })  
-   let index = arrayOfPics.indexOf(this.imagePreview)
-   if(arrayOfPics[index+1] !== undefined) {
-    this.imagePreview = arrayOfPics[index+1]
-   }else{
-    this.imagePreview = arrayOfPics[0]
-   }
-   
+nextImage(){  
+ 
+  let index = this.images.indexOf(this.imagePreview)
+ 
+  if(index+1 < this.images.length){
+
+    this.imagePreview = this.images[index+1]
+    }
   }
   prevImage(){ 
-    const arrayOfPics : any[] = [];
-     const el = (this.slidesStore.filter(element => element.src == this.imagePreview))
-     this.slidesStore.map(el => {
-      arrayOfPics.push(el.data.src)
-     })  
-     let index = arrayOfPics.indexOf(this.imagePreview)
-     if(arrayOfPics[index-1] !== undefined) {
-      this.imagePreview = arrayOfPics[index-1]
-     }else{
-      this.imagePreview = arrayOfPics[arrayOfPics.length-1]
-     }
-     
+  
+    let index = this.images.indexOf(this.imagePreview)
+    if(index > 0){
+
+    this.imagePreview = this.images[index-1]
+    }
     }
  
 closeModal(){
