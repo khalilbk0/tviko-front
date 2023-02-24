@@ -18,7 +18,7 @@ export class CategoryComponent  {
   results!: any[];
   catThreeEmpty: boolean | undefined ;
   currentPage = 1;
-  resultsPerPage = 8;
+  resultsPerPage = 12;
   id: string | undefined; 
   titleCategory : string | undefined ;
   catOneSelected = false ;
