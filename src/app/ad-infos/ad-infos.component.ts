@@ -23,6 +23,9 @@ export class AdInfosComponent {
   images = ["https://via.placeholder.com/600/771796","https://via.placeholder.com/600/771796","https://via.placeholder.com/600/771796","https://via.placeholder.com/600/771796","https://via.placeholder.com/600/771796"];
    
 public preview(src:string){ 
+  this.imagePreview = src
+  this.isOpened  = true
+  alert('ok')
 }
 customOptions: OwlOptions = {
   loop: true,  

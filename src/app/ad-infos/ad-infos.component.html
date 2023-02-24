@@ -8,6 +8,21 @@
    
   </main>
   <app-divider></app-divider>
+  <div id="myModal" class="modal"  [ngClass]="{' d-inline  text-center' : isOpened }" >
+    <span class="close" (click)="closeModal()" >&times;</span>
+  
+    <div class="modal-contentd-flex justify-content-center" >
+
+        <a (click)="prevImage()"  class="previous round">&#8249;</a>
+        <img class="img-fluid prevImage"  src="{{imagePreview}}" height="20px" (click)="nextImage()" > 
+
+<a  (click)="nextImage()" class="next round">&#8250;</a>
+    </div>
+    <div class="row text-center  mx-auto w-100">
+        <div class="row d-inline">
+        </div>
+    </div>
+</div>
   <div class="container d-none" *ngIf="ad !== undefined"> 
     <div class="row text-center m-4">
       
@@ -15,21 +30,7 @@
     </div>
     <div class="ad-info-wrapper">
   
-        <div id="myModal" class="modal"  [ngClass]="{' d-inline  text-center' : isOpened }" >
-            <span class="close" (click)="closeModal()" >&times;</span>
-          
-            <div class="modal-contentd-flex justify-content-center" >
-
-                <a (click)="prevImage()"  class="previous round">&#8249;</a>
-                <img class="img-fluid prevImage"  src="{{imagePreview}}" height="20px" (click)="nextImage()" > 
-
-        <a  (click)="nextImage()" class="next round">&#8250;</a>
-            </div>
-            <div class="row text-center  mx-auto w-100">
-                <div class="row d-inline">
-                </div>
-            </div>
-        </div>
+ 
       <div class="gallery " #target > 
         <gallery    (itemClick)="itemClicked('ok')" class="background-color:transparent"   [items]="slidesStore" ></gallery>
      
@@ -101,7 +102,7 @@
       
           <ng-container *ngFor="let slide of images">
             <ng-template carouselSlide class="item" >
-              <img [src]="slide"  >
+              <img [src]="slide"  (click)="preview(slide)"  >
             </ng-template>
           </ng-container>
       
