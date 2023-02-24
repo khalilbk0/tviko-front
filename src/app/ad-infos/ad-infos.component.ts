@@ -24,8 +24,7 @@ export class AdInfosComponent {
    
 public preview(src:string){ 
   this.imagePreview = src
-  this.isOpened  = true
-  alert('ok')
+  this.isOpened  = true 
 }
 customOptions: OwlOptions = {
   loop: true,  
