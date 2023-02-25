@@ -39,7 +39,10 @@ setCategoryOne() {
     this.Category1 = res.data 
      
   }).finally(() => {
-    this.Category1 = Array(this.Category1[0] , this.Category1[1],this.Category1[2] , this.Category1[3])
+    if(this.Category1.length > 3) {
+      this.Category1 = Array(this.Category1[0] , this.Category1[1],this.Category1[2] , this.Category1[3])
+ 
+    }
   })
    
   

@@ -76,15 +76,18 @@ export class CategoryComponent  {
       this.catTwoSelected = false ; 
       this.catThreeSelecteD = false ; 
       this.catById("1")
+      this.currentPage = 1
     }if(this.id =="2"){
-     
+      
       this.catOneSelected = false ; 
       this.catTwoSelected = true ; 
       this.catThreeSelecteD = false ; 
       this.catById("2")
+      this.currentPage = 1
     }if(this.id=="3"){
       this.catThreeSelecteD = true ; 
       this.catById("3")
+      this.currentPage = 1
       this.catOneSelected = false ; 
       this.catTwoSelected = false ;  
     }
