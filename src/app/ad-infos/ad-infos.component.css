@@ -208,7 +208,7 @@ main{
     margin-right: auto;
   }
   
-  .address {
+  .address {word-wrap: break-word;
     margin-top: 30px;
     margin-bottom: 30px;
     font-weight: 500;
@@ -274,6 +274,7 @@ main{
   .description-text {
     font-size: 18px;
     letter-spacing: 1px;
+    word-wrap: break-word;
   }
   
   .description {
