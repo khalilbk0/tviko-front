@@ -67,7 +67,10 @@ nextImage(){
   if(index+1 < this.images.length){
 
     this.imagePreview = this.images[index+1]
+    }else{
+      this.imagePreview = this.images[0]
     }
+  
   }
   prevImage(){ 
   
@@ -75,6 +78,9 @@ nextImage(){
     if(index > 0){
 
     this.imagePreview = this.images[index-1]
+    }else{
+
+      this.imagePreview = this.images[this.images.length-1]
     }
     }
  
