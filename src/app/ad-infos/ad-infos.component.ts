@@ -20,6 +20,7 @@ export class AdInfosComponent {
   slidesStore : any[] = [] ;
   galleryId = 'myLightbox'
   arrayPreview!: string[];
+  isFetched = false ; 
   images = ["https://via.placeholder.com/600/771796","https://via.placeholder.com/600/771796","https://via.placeholder.com/600/771796","https://via.placeholder.com/600/771796","https://via.placeholder.com/600/771796"];
    
 public preview(src:string){ 
@@ -114,7 +115,7 @@ closeModal(){
         }
       });
 
-    if(params["id"] == "0") {
+    if(params["id"] == "") {
       this.ad = {
         "id": "70",
         "squarefeet": "60",
@@ -131,6 +132,7 @@ closeModal(){
         for (let i = 0; i < res.data[0].otherImages.length; i++) {
            this.images.push(res.data[0].otherImages[i])
           
+        this.isFetched = true
         }
       
         
