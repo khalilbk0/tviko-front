@@ -7,12 +7,37 @@ import { ElementRef } from '@angular/core';
 import { Renderer2 } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { animate, style, transition, trigger } from '@angular/animations';
 
 @Component({
   
   selector: 'app-ad-infos',
   templateUrl: './ad-infos.component.html',
   styleUrls: ['./ad-infos.component.css'] , 
+
+  animations: [
+    trigger(
+      'inOutAnimation', 
+      [
+        transition(
+          ':enter', 
+          [
+            style({   opacity: 1 }),
+            animate('1s ease-out', 
+                    style({   opacity: 1 }))
+          ]
+        ),
+        transition(
+          ':leave', 
+          [
+            style({  opacity: 1 }),
+            animate('1s ease-in', 
+                    style({   opacity: 0 }))
+          ]
+        )
+      ]
+    )
+  ]
   
 })
 export class AdInfosComponent {  
@@ -22,6 +47,7 @@ export class AdInfosComponent {
   arrayPreview!: string[];
   isFetched = false ; 
   images = ["https://via.placeholder.com/600/771796","https://via.placeholder.com/600/771796","https://via.placeholder.com/600/771796","https://via.placeholder.com/600/771796","https://via.placeholder.com/600/771796"];
+  loader = true ;
    
 public preview(src:string){ 
   this.imagePreview = src
@@ -133,6 +159,9 @@ closeModal(){
            this.images.push(res.data[0].otherImages[i])
           
         this.isFetched = true
+        setTimeout(() => {
+          this.loader = false
+        }, 400);
         }
       
         

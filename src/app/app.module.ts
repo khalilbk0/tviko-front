@@ -1,6 +1,6 @@
+ 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser'; 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -16,11 +16,12 @@ import { AdInfosComponent } from './ad-infos/ad-infos.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';  
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactPageComponent } from './contact-page/contact-page.component'; 
-import { GalleryModule } from 'ng-gallery';
-import {  SharedModule } from '@coreui/angular';
+import { GalleryModule } from 'ng-gallery'; 
 import { GALLERY_CONFIG } from 'ng-gallery';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FormsModule } from '@angular/forms';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,8 @@ import { FormsModule } from '@angular/forms';
     CategoryComponent,
     AdInfosComponent,
     AboutUsComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    SpinnerComponent
     
   ],
   imports: [
@@ -47,17 +49,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,   
   ],
   providers: [
-    {
-      provide: GALLERY_CONFIG,
-      useValue: {
-        thumb:false,
-        counter:false,
-        dots: true,
-        dotsSize:12 ,
-        loadingStrategy: "preload" ,
-        imageSize: 'cover' , 
-      }
-    }
+ 
   ],
   bootstrap: [AppComponent]
 })
