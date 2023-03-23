@@ -8,7 +8,9 @@
   padding-left: 0px !important;
   padding-right: 0px !important;
 }
- 
+.numbers{
+  background-color: #D9A575;
+}
 .card { 
   width: 260px; 
   padding-bottom: 13%;
@@ -229,4 +231,27 @@ padding-left: 3%;
   .card-text {
     font-size: 16px;
   }
+}
+.numbers h1{
+  font-size: 4rem;
+  text-align: center;
+}
+.numbers .col {margin-top: 25px;
+  margin-bottom: 25px;
+border-left-width: 5;
+border-color: black
+;
+border: 1px solid black;
+border-top: none;
+border-left: 0;
+border-bottom: 0;}
+.numbers h1{
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 3%;
+}
+.numbers h2 {
+  font-size: 1rem;
+  text-align: center;
+  justify-content: center;
 }
